@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@import "./components/navbar/index.css";
+@import "./components/heroSection/index.css";
+@import "./components/coreProducts/index.css";
+@import "./components/acquireCRX/index.css";
+@import "./components/tokenomics/index.css";
+@import "./components/partners/index.css";
+@import "./components/testimonials/index.css";
+@import "./components/catBanner/index.css";
+@import "./components/footer/index.css";
+
