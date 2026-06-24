@@ -1,10 +1,9 @@
+import Navbar from "./components/navbar/Navbar"
 
 const App = () => {
   return (
     <div className='bg-[#05051F] h-screen'>
-      <h1 class="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+      <Navbar />
     </div>
   )
 }
