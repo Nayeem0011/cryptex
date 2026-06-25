@@ -1,0 +1,40 @@
+/* Navbar */
+.crx-navbar {
+    @apply py-[25.07px] flex items-center justify-between px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-37;
+}
+
+.crx-navbar-link {
+    @apply text-[#CDD6DA] text-[14.1px] font-normal leading-[120%] tracking-[0%];
+}
+
+.crx-icon-btn {
+    @apply relative p-[12.53px] rounded-full cursor-pointer;
+    background: "linear-gradient(180deg, rgba(5,5,31,0.1) 0%, rgba(255,255,255,0.1) 100%)";
+}
+
+.crx-icon-btn {
+    @apply relative p-[12.53px] rounded-full cursor-pointer;
+    background: linear-gradient(180deg, rgba(5, 5, 31, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+}
+
+.crx-icon-btn-border {
+    @apply absolute inset-0 rounded-[47px] p-[0.78px];
+    background: linear-gradient(180deg, #1B1C33 0%, rgba(34, 35, 56, 0) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.crx-audit-btn {
+    @apply relative flex items-center gap-[6.15px] py-[14.88px] pl-[25.07px] pr-[15.67px] rounded-full;
+    background: linear-gradient(180deg, rgba(5, 5, 31, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+}
+
+.crx-audit-btn-label {
+    @apply font-medium text-[14.1px] text-[#F5FCFF] leading-[120%] tracking-[0%];
+}
+
+.crx-audit-btn-icon {
+    @apply flex items-center justify-center w-[17.23px] h-[17.23px] rounded-[36.93px] bg-[#724BE4] p-[4.31px];
+}

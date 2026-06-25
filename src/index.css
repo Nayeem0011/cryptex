@@ -10,3 +10,11 @@
 @import "./components/catBanner/index.css";
 @import "./components/footer/index.css";
 
+@theme {
+    --breakpoint-*: initial;
+    --breakpoint-sm: 475px;
+    --breakpoint-md: 868px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1120px;
+    --breakpoint-2xl: 1140px;
+}
