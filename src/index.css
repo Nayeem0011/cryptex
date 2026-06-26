@@ -18,3 +18,30 @@
     --breakpoint-xl: 1120px;
     --breakpoint-2xl: 1140px;
 }
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-sans: "DM Sans", sans-serif;
+  --font-onest: "Onest", sans-serif;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/font/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("./assets/font/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Onest";
+  src: url("./assets/font/Onest-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}

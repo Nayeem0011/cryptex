@@ -4,6 +4,7 @@
 }
 
 .crx-navbar-link {
+    font-family: "DM Sans";
     @apply text-[#CDD6DA] text-[14.1px] font-normal leading-[120%] tracking-[0%];
 }
 
@@ -32,6 +33,7 @@
 }
 
 .crx-audit-btn-label {
+    font-family: "Inter";
     @apply font-medium text-[14.1px] text-[#F5FCFF] leading-[120%] tracking-[0%];
 }
 
