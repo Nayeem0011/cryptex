@@ -1,6 +1,9 @@
 /* Navbar */
 .crx-navbar {
     @apply py-[25.07px] flex items-center justify-between px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-37;
+    border-bottom: 0.78px solid transparent;
+    border-image-source: linear-gradient(90deg, #010214 0%, rgba(55, 57, 82, 0.6) 50.16%, #010214 100%);
+    border-image-slice: 1;
 }
 
 .crx-navbar-link {
@@ -28,7 +31,7 @@
 }
 
 .crx-audit-btn {
-    @apply relative flex items-center gap-[6.15px] py-[14.88px] pl-[25.07px] pr-[15.67px] rounded-full;
+    @apply relative flex items-center gap-[6.15px] py-[14.88px] pl-[25.07px] pr-[15.67px] rounded-full cursor-pointer;
     background: linear-gradient(180deg, rgba(5, 5, 31, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
 }
 

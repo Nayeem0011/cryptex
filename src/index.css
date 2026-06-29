@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+@import "./components/header/index.css";
 @import "./components/navbar/index.css";
 @import "./components/heroSection/index.css";
 @import "./components/coreProducts/index.css";
@@ -11,12 +12,12 @@
 @import "./components/footer/index.css";
 
 @theme {
-    --breakpoint-*: initial;
-    --breakpoint-sm: 475px;
-    --breakpoint-md: 868px;
-    --breakpoint-lg: 1024px;
-    --breakpoint-xl: 1120px;
-    --breakpoint-2xl: 1140px;
+  --breakpoint-*: initial;
+  --breakpoint-sm: 475px;
+  --breakpoint-md: 868px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1120px;
+  --breakpoint-2xl: 1140px;
 }
 
 @theme {

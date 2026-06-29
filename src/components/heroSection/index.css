@@ -1,0 +1,65 @@
+.hero-container {
+    @apply relative w-full h-full flex flex-col items-center justify-between gap-15 sm:gap-30 md:gap-35 lg:gap-40 xl:gap-45 2xl:gap-50 z-10 px-2 lg:px-29.5 py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24;
+}
+
+.badge {
+    @apply inline-flex items-center rounded-[47px] border-[0.78px] border-[#2F284F] bg-[#161231] px-2.5 sm:px-2.75 md:px-3 lg:px-3.25 xl:px-3.5 2xl:px-[19.58px] py-1.25 sm:py-1.5 md:py-2 lg:py-2.25 xl:py-[10.18px];
+}
+
+.badge p {
+    font-family: "Inter";
+    @apply text-[#F5FCFF] font-normal text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14.1px] leading-[120%] tracking-[0%] text-center;
+}
+
+.hero-title {
+    @apply flex flex-col gap-[15.07px] pt-[9.4px];
+}
+
+.hero-title h1 {
+    font-family: "Onest";
+    @apply font-medium text-[32px] sm:text-[36px] md:text-[40px] lg:text-[48px] xl:text-[64px] 2xl:text-[70.5px] leading-[140%] text-center text-[#F5FCFF];
+}
+
+.hero-title p {
+    font-family: "Onest";
+    @apply font-normal text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[17.23px] leading-[160%] tracking-[0%] text-center text-[#9FA3BB];
+}
+
+.btn-run-app {
+    @apply flex items-center justify-center pl-3.25 sm:pl-3.5 md:pl-3.75 lg:pl-4 xl:pl-5 2xl:pl-[25.07px] pr-2 sm:pr-2.25 md:pr-2.5 lg:pr-2.75 xl:pr-[12.53px] py-2 sm:py-2.25 md:py-2.5 lg:py-2.75 xl:py-[12.53px] gap-1 sm:gap-1.25 md:gap-1.5 lg:gap-[7.83px] rounded-[47px] bg-[#FFFFFF] cursor-pointer;
+}
+
+.btn-run-app-label {
+    font-family: "Inter";
+    @apply font-medium text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[15.67px] leading-[120%] tracking-[0%] text-[#010214];
+}
+
+.btn-run-app-icon {
+    @apply flex items-center justify-center w-3.25 sm:w-3.5 md:w-3.75 lg:w-4 xl:w-5 2xl:w-[25.07px] h-3.25 sm:h-3.5 md:h-3.75 lg:h-4 xl:h-5 2xl:h-[25.07px] rounded-[36.93px] bg-[#724BE4];
+}
+
+.stats-bar-inner {
+    @apply flex items-center justify-between rounded-[25.07px] border-[0.78px] border-[#FFFFFF1A] backdrop-blur-[9.4px] py-[60.13px];
+}
+
+.stats-bar-inner {
+    @apply flex items-center justify-between rounded-[25.07px] border-[0.78px] border-[#FFFFFF1A] backdrop-blur-[9.4px] py-6 sm:py-8 md:py-9 lg:py-10 xl:py-[60.13px];
+}
+
+.stats-bar-item {
+    @apply flex-1 flex flex-col gap-[9.4px] items-center justify-center text-center;
+}
+
+.stats-bar-value {
+    font-family: "Onest";
+    @apply font-medium text-[14px] sm:text-[15px] md:text-[16px] lg:text-[20px] xl:text-[24px] 2xl:text-[31.33px] leading-[120%] tracking-[0%] text-center text-[#FFFFFF];
+}
+
+.stats-bar-label {
+    font-family: "Onest";
+    @apply font-normal text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[17.23px] leading-[145%] tracking-[0%] text-center text-[#FFFFFF];
+}
+
+.stats-bar-divider {
+    @apply w-[1.17px] h-[97.13px] opacity-30;
+}

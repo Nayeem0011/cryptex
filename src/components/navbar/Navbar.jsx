@@ -16,13 +16,8 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="crx-navbar">
-            <div className="flex items-center gap-[6.27px]">
-                <img src={navbar_logo} alt="Logo" className="h-[31.33px] w-auto cursor-pointer" />
-                <p className="font-medium text-[18.8px] text-[#CDD6DA] leading-[120%] tracking-[0%]">
-                    CryptEx
-                </p>
-            </div>
+        <div className="crx-navbar ">
+            <img src={navbar_logo} alt="Logo" className="h-[31.33px] w-[110.5999984741211px] cursor-pointer" />
             <button
                 className="md:hidden text-white"
                 onClick={() => setIsOpen(true)}
