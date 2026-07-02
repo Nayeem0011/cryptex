@@ -58,8 +58,8 @@ const Navbar = () => {
             </div>
 
             {/* Overlay */}
-            <div className={`fixed inset-0 bg-white/15 z-40 transition-all duration-200 md:hidden
-                    ${isOpen ? "opacity-23 visible" : "opacity-0 invisible"}`}
+            <div className={`fixed inset-0 z-40 bg-black/25 backdrop-blur-[1px] transition-all duration-200 md:hidden
+                    ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"}`}
                 onClick={() => setIsOpen(false)}
             />
 

@@ -14,7 +14,7 @@ const Hero = () => {
                         Innovating Sater System Security
                     </p>
                 </div>
-                <div className='flex flex-col items-center gap-[25.07px]'>
+                <div className='flex flex-col items-center gap-4 md:gap-5 lg:gap-[25.07px]'>
                     <div className='hero-title'>
                         <h1>
                             Defining Security Standards <br className="hidden lg:block" /> for Sater Systems
@@ -36,7 +36,7 @@ const Hero = () => {
                 </div>
             </div>
 
-            <div className="w-full px-0 sm:px-4 md:px-6 lg:px-8 xl:px-10 2xl:px-[148.83px]">
+            <div className="w-full ">
                 <div className='stats-bar-inner'>
                     {stats.map((stat, index) => (
                         <>
