@@ -1,0 +1,107 @@
+.main-card {
+    @apply flex flex-col md:flex-row items-center justify-between rounded-[25.07px] gap-7 sm:gap-8 md:gap-2 pl-4 sm:pl-6 md:pl-10 lg:pl-14 xl:pl-24 2xl:pl-[156.67px] pr-2 sm:pr-4 md:pr-6 lg:pr-10 xl:pr-12 2xl:pr-[62.67px] py-5 sm:py-6 md:py-8 lg:py-9 xl:py-10 2xl:py-11.75;
+    border: 0.78px solid transparent;
+    opacity: 1;
+    background:
+        linear-gradient(#0E0E27, #0E0E27) padding-box,
+        linear-gradient(180deg, #2D2F42 0%, rgba(34, 35, 56, 0) 100%) border-box;
+}
+
+.section-title-md {
+    font-family: "Onest";
+    @apply font-medium text-[24px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[48px] 2xl:text-[50.13px] leading-[120%] tracking-[0%] text-[#D0D1E3] text-center md:text-left;
+}
+
+.section-subtitle-md {
+    font-family: "Onest";
+    @apply max-w-115 mx-auto font-normal text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[17.23px] leading-[150%] tracking-[0%] text-[#818499] text-center md:text-left;
+}
+
+.btn-wallet {
+    @apply flex items-center pl-3.25 sm:pl-3.5 md:pl-3.75 lg:pl-4 xl:pl-5 2xl:pl-[25.07px] pr-[8.53px] md:pr-[9.53px] lg:pr-[10.53px] xl:pr-[11.53px] 2xl:pr-[12.53px] py-2 md:py-[9.53px] lg:py-[10.53px] xl:py-[11.53px] 2xl:py-[12.53px] gap-[4.83px] sm:gap-[5.83px] md:gap-[6.83px] lg:gap-[7.83px] rounded-[47px] backdrop-blur-[6.27px] cursor-pointer;
+    background: linear-gradient(180deg, #4E27BC 0%, #A68AF9 100%);
+}
+
+.btn-wallet-label {
+    font-family: "Inter";
+    @apply font-medium text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14.1px] leading-[120%] tracking-[0%] text-[#FFFFFF];
+}
+
+.from-card {
+    @apply flex flex-col relative rounded-[18.8px] gap-[12.53px] sm:gap-[16.8px] md:gap-[18.8px] px-3 sm:px-3.25 md:px-3.75 lg:px-4 xl:px-5 2xl:px-[25.7px] pt-3.25 sm:pt-3.5 md:pt-3.75 lg:pt-4 xl:pt-5 2xl:pt-[25.7px] pb-[26.35px];
+}
+
+.from-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 0.78px;
+    border-radius: inherit;
+    background: linear-gradient(180deg, #2D2F42 0%, rgba(34, 35, 56, 0) 100%);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.from-tab-active {
+    @apply absolute top-px bottom-px rounded-[47px] transition-all duration-400 ease-in-out;
+    background: linear-gradient(180deg, #4E27BC 0%, #A68AF9 100%);
+}
+
+.from-tab-button-Buy {
+    font-family: "Inter";
+    @apply relative z-10 px-10 sm:px-11 md:px-12 lg:px-14 xl:px-16 2xl:px-[74.28px] py-2.25 md:py-2.5 lg:py-2.75 xl:py-3 2xl:py-3.25 rounded-[47px] font-medium text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14.1px] text-white cursor-pointer;
+}
+
+.from-tab-button-CRX {
+    font-family: "Inter";
+    @apply relative z-10 px-10 sm:px-11 md:px-12 lg:px-14 xl:px-16 2xl:px-18.25 py-2.25 md:py-2.5 lg:py-2.75 xl:py-3 2xl:py-3.25 rounded-[47px] font-medium text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14.1px] text-white cursor-pointer;
+}
+
+.payment-field-label {
+    font-family: "Onest";
+    @apply font-normal text-[10px] sm:text-[11px] md:text-[12.53px] leading-[155%] tracking-[0%] text-[#D0D1E3];
+}
+
+.payment-input-text {
+    font-family: "Onest";
+    @apply w-[210.72px] sm:w-[225.72px] md:w-[250.72px] lg:w-[275.72px] xl:w-[320.72px] 2xl:w-[351.72px] h-6 sm:h-8 md:h-9 lg:h-10 xl:h-12 2xl:h-[56.4px] pl-2 sm:pl-2.5 md:pl-3 lg:pl-3.5 xl:pl-4 2xl:pl-[18.8px] pr-16 sm:pr-18 md:pr-20 lg:pr-21 xl:pr-24 2xl:pr-27.5 py-[15.67px] rounded-[9.4px] border-[0.78px] border-[#25263C] font-normal text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14.1px] leading-[120%] text-[#9FA3BB] outline-none;
+}
+
+.payment-selector {
+    @apply absolute flex items-center right-[8.8px] sm:right-[9.8px] md:right-[10.8px] lg:right-[12.8px] xl:right-[14.8px] 2xl:right-[18.8px] top-1/2 -translate-y-1/2 gap-[2.7px] md:gap-[3.7px] lg:gap-[4.7px] cursor-pointer;
+}
+
+.payment-symbol-text {
+    font-family: "Onest";
+    @apply font-normal text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[15.67px] text-[#D0D1E3];
+}
+
+.reference-price {
+    font-family: "Onest";
+    @apply font-normal text-[10px] sm:text-[11px] md:text-[12.53px] leading-[120%] tracking-[0%] text-[#9FA3BB];
+}
+
+.step-number {
+    font-family: "Inter";
+    @apply font-normal text-[9px] sm:text-[10.97px] leading-[120%] tracking-[0%] text-[#FFFFFF];
+}
+
+.step-text {
+    font-family: "Onest";
+    @apply font-normal text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14.1px] leading-[120%] tracking-[0%] text-[#FFFFFF];
+}
+
+.step-number-card {
+    @apply flex items-center justify-center w-3.5 md:w-4 lg:w-4.5 xl:w-5 2xl:w-[23.5px] h-3.5 md:h-4 lg:h-4.5 xl:h-5 2xl:h-[23.5px] rounded-full;
+    background: linear-gradient(180deg, #4E27BC 0%, #A68AF9 100%);
+}
+
+.btn-connect-wallet-full {
+    @apply w-full py-2.5 sm:py-2.75 md:py-[12.53px] gap-[7.83px] rounded-[9.4px] font-medium text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13.32px] leading-[130%] tracking-[0%] text-[#FFFFFF] cursor-pointer;
+    background: linear-gradient(180deg, #4E27BC 0%, #A68AF9 100%);
+    font-family: "Inter";
+}
