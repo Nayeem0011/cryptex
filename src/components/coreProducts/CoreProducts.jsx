@@ -89,7 +89,7 @@ const cards = [
 const CoreProducts = () => {
 
     return (
-        <div className='products-section'>
+        <div id="products" className='products-section'>
             <div className='flex flex-col gap-2 sm:gap-2.5 md:gap-[12.53px]'>
                 <h1 className='products-section-title'>
                     Core Products

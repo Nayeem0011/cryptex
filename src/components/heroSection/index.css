@@ -1,5 +1,5 @@
 .hero-container {
-    @apply relative w-full h-full max-w-[1550px] mx-auto flex flex-col items-center justify-between gap-15 sm:gap-30 md:gap-35 lg:gap-40 xl:gap-45 z-10 px-2 sm:px-3 md:px-4 py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20 2xl:py-24;
+    @apply relative w-full h-full max-w-[1550px] mx-auto flex flex-col items-center justify-between gap-15 sm:gap-30 md:gap-35 lg:gap-40 xl:gap-45 z-10 px-2 sm:px-3 md:px-4 pb-10 sm:pb-12 md:pb-14 lg:pb-16 xl:pb-20 2xl:pb-24 pt-30 md:pt-36 lg:pt-40 xl:pt-44 2xl:pt-48;
 }
 
 .badge {

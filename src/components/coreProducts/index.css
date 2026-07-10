@@ -21,7 +21,7 @@
 }
 
 .product-card-content {
-    @apply relative z-10 flex flex-col gap-[25.07px] p-2.5 sm:p-2.75 md:p-3 lg:p-3.25 xl:p-3.5 2xl:p-[25.11px];
+    @apply relative flex flex-col gap-[25.07px] p-2.5 sm:p-2.75 md:p-3 lg:p-3.25 xl:p-3.5 2xl:p-[25.11px];
 }
 
 .product-card-icon-wrap {
