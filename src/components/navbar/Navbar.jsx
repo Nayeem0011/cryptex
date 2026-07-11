@@ -60,7 +60,7 @@ const Navbar = () => {
             <div
                 className={`fixed top-0 left-0 w-full z-50 transition-transform duration-500 ease-in-out
                 ${isVisible ? "translate-y-0" : "-translate-y-full"}
-                ${isScrolled ? "bg-[#05051F]/90 backdrop-blur-md shadow-lg" : "bg-transparent"}`}
+                ${isScrolled ? "bg-[#05051F]/70 backdrop-blur-md shadow-lg" : "bg-transparent"}`}
             >
                 <div className="crx-navbar ">
                     <img onClick={scrollToTop} src={navbar_logo} alt="Logo" className="h-[31.33px] w-[110.5999984741211px] cursor-pointer" />
