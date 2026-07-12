@@ -1,5 +1,5 @@
 .crx-navbar {
-    @apply py-[25.07px] flex items-center justify-between w-full h-full max-w-[1550px] mx-auto px-2 sm:px-3 md:px-4;
+    @apply py-4 sm:py-5 md:py-[25.07px] flex items-center justify-between w-full h-full max-w-[1550px] mx-auto px-2 sm:px-3 md:px-4;
     border-bottom: 0.78px solid transparent;
     border-image-source: linear-gradient(90deg, #010214 0%, rgba(55, 57, 82, 0.6) 50.16%, #010214 100%);
     border-image-slice: 1;

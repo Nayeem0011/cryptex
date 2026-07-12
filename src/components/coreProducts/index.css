@@ -9,7 +9,7 @@
 
 .products-section-subtitle {
     font-family: "Onest";
-    @apply font-normal text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[15.67px] leading-[130%] md:leading-[145%] lg:leading-[165%] tracking-[0%] text-center text-[#818499];
+    @apply font-normal text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[15.67px] leading-[130%] md:leading-[145%] lg:leading-[165%] tracking-[0%] text-center text-[#818499];
 }
 
 .products-grid {

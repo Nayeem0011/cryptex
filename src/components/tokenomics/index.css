@@ -1,33 +1,35 @@
 .tokenomics {
-    @apply w-full bg-[#09091F] py-[73.63px];
+    @apply w-full bg-[#09091F] pb-1 xl:pb-16 2xl:pb-[73.63px] pt-8 sm:pt-9 md:pt-10 lg:pt-12 xl:pt-16 2xl:pt-[73.63px];
 }
 
 .tokenomics-section {
-    @apply flex flex-col md:flex-row items-center justify-between max-w-[1550px] mx-auto;
+    @apply flex flex-col xl:flex-row items-center justify-between max-w-[1550px] mx-auto;
 }
 
 .tokenomics-section-inner {
-    @apply flex flex-col items-start gap-[31.33px] px-4;
+    @apply flex flex-col items-start gap-3.75 md:gap-4 lg:gap-5 xl:gap-6 2xl:gap-[31.33px] px-4;
 }
 
 .tokenomics-section-header {
-    @apply font-medium text-[56.4px] leading-[130%] tracking-[0%] text-[#D0D1E3];
+    font-family: "Onest";
+    @apply font-medium text-[24px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[48px] 2xl:text-[56.4px] leading-[130%] tracking-[0%] text-[#D0D1E3] text-center md:text-left;
 }
 
 .tokenomics-section-desc {
-    @apply font-normal text-[15.67px] leading-[160%] tracking-[0%] text-[#7F8799];
+    font-family: "Onest";
+    @apply font-normal text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[15.67px] leading-[160%] tracking-[0%] text-[#7F8799] text-center md:text-left;
 }
 
 .feature-section-main {
-    @apply flex flex-col justify-between gap-[32.5px] relative;
+    @apply flex flex-col justify-between gap-4 md:gap-5 lg:gap-6 xl:gap-7 2xl:gap-[32.5px] relative;
 }
 
 .feature-section {
-    @apply grid grid-cols-1 sm:grid-cols-2 gap-6.25 sm:gap-7.5 md:gap-9 lg:gap-10 xl:gap-12.5 2xl:gap-16.25;
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-7.5 md:gap-9 lg:gap-10 xl:gap-12.5 2xl:gap-16.25;
 }
 
 .feature-item {
-    @apply flex flex-col gap-[9.4px];
+    @apply flex flex-col gap-1.75 md:gap-2 lg:gap-[9.4px];
 }
 
 .feature-itemcard {
@@ -35,15 +37,17 @@
 }
 
 .feature-icon-wrap {
-    @apply flex items-center justify-center w-[37.6px] h-[37.6px] rounded-full bg-[#FFFFFF0A] backdrop-blur-[6.27px];
+    @apply flex items-center justify-center w-6 md:w-7 lg:w-8 xl:w-[37.6px] h-6 md:h-7 lg:h-8 xl:h-[37.6px] rounded-full bg-[#FFFFFF0A] backdrop-blur-[6.27px];
 }
 
 .feature-item-title {
-    @apply font-medium text-[18.8px] leading-[160%] text-[#D0D1E3];
+    font-family: "Onest";
+    @apply font-medium text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18.8px] leading-[160%] text-[#D0D1E3];
 }
 
 .feature-item-desc {
-    @apply font-normal text-[12.53px] leading-[150%] text-[#7F8799];
+    font-family: "Onest";
+    @apply font-normal text-[10px] md:text-[11px] lg:text-[12.53px] leading-[150%] text-[#7F8799];
 }
 
 .btn-staking {
