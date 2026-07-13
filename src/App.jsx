@@ -2,6 +2,7 @@ import AcquireCRX from "./components/acquireCRX/AcquireCRX"
 import CoreProducts from "./components/coreProducts/CoreProducts"
 import Header from "./components/header/Header"
 import Partners from "./components/partners/Partners"
+import Testimonials from "./components/testimonials/Testimonials"
 import Tokenomics from "./components/tokenomics/Tokenomics"
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
       <AcquireCRX />
       <Tokenomics />
       <Partners />
+      <Testimonials />
     </div>
   )
 }
