@@ -16,7 +16,7 @@ const companies = [
 
 const Partners = () => {
     return (
-        <div className='w-full max-w-[1550px] mx-auto pb-16 sm:pb-18 md:pb-20 lg:pb-24 xl:pb-28 2xl:pb-35.25'>
+        <div id="buy-crx" className='w-full max-w-[1550px] mx-auto pb-16 sm:pb-18 md:pb-20 lg:pb-24 xl:pb-28 2xl:pb-35.25'>
             <div className='flex items-center justify-between'>
                 <h1 className='font-medium text-[56.4px] leading-[120%] tracking-[0%] text-[#D0D1E3]'>
                     Partners
@@ -52,7 +52,7 @@ const Partners = () => {
                             </defs>
                         </svg>
                         {/* Content */}
-                        <div className="relative z-10 flex h-full items-center justify-center">
+                        <div className="relative flex h-full items-center justify-center">
                             <img
                                 src={item.logo}
                                 alt={`Company ${index + 1}`}

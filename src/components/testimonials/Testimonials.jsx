@@ -28,7 +28,7 @@ const teamCards = [
 
 const Testimonials = () => {
     return (
-        <div className='pb-[156.67px]'>
+        <div id="team" className='pb-[156.67px]'>
             <div className='w-full max-w-[1550px] mx-auto flex items-center justify-between pb-[79.83px]'>
                 <h1 className='font-medium text-[56.4px] leading-[120%] tracking-[0%] text-[#D0D1E3]'>
                     Powered by HashEx
