@@ -1,4 +1,5 @@
 import AcquireCRX from "./components/acquireCRX/AcquireCRX"
+import CTABanner from "./components/catBanner/CTABanner"
 import CoreProducts from "./components/coreProducts/CoreProducts"
 import Header from "./components/header/Header"
 import Partners from "./components/partners/Partners"
@@ -14,6 +15,7 @@ const App = () => {
       <Tokenomics />
       <Partners />
       <Testimonials />
+      <CTABanner />
     </div>
   )
 }

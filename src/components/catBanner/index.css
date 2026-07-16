@@ -1,0 +1,9 @@
+.btn-Run {
+    @apply flex items-center pl-3.25 sm:pl-3.5 md:pl-3.75 lg:pl-4 xl:pl-5 2xl:pl-[25.07px] pr-[8.53px] md:pr-[9.53px] lg:pr-[10.53px] xl:pr-[11.53px] 2xl:pr-[12.53px] py-2 md:py-[9.53px] lg:py-[10.53px] xl:py-[11.53px] 2xl:py-[12.53px] gap-[4.83px] sm:gap-[5.83px] md:gap-[6.83px] lg:gap-[7.83px] rounded-[47px] backdrop-blur-[6.27px] cursor-pointer;
+    background: linear-gradient(180deg, #4E27BC 0%, #A68AF9 100%);
+}
+
+.btn-Run-label {
+    font-family: "Inter";
+    @apply font-medium text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16.1px] 2xl:text-[17.23px] leading-[120%] tracking-[0%] text-[#FFFFFF];
+}
