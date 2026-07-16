@@ -97,7 +97,7 @@ const features = [
 
 const Tokenomics = () => {
     return (
-        <div id="tokenomics" className='w-full pb-16 sm:pb-18 md:pb-20 lg:pb-24 xl:pb-28 2xl:pb-35.25'>
+        <div id="tokenomics" className='w-full pt-16 sm:pt-18 md:pt-20 lg:pt-24 xl:pt-28 2xl:pt-35.25'>
             <div className='tokenomics'>
                 <div className='tokenomics-section'>
                     <div className='tokenomics-section-inner'>

@@ -55,7 +55,7 @@ const AcquireCRX = () => {
     }, [activeButton]);
 
     return (
-        <div className='w-full max-w-[1550px] mx-auto px-2 sm:px-3 md:px-4 pb-16 sm:pb-18 md:pb-20 lg:pb-24 xl:pb-28 2xl:pb-35.25'>
+        <div className='w-full max-w-[1550px] mx-auto px-2 sm:px-3 md:px-4'>
             <div className='main-card'>
                 <div className='flex flex-col items-center md:items-start gap-3.25 sm:gap-3.5 md:gap-3.75 lg:gap-4 xl:gap-5 2xl:gap-[25.07px]'>
                     <div className='flex flex-col items-center md:items-start gap-1.25 sm:gap-2.5 md:gap-3 lg:gap-3.5 xl:gap-3.75 2xl:gap-[18.8px]'>
