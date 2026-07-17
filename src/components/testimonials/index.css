@@ -8,27 +8,27 @@
 }
 
 .team-section {
-    @apply pt-16 sm:pt-18 md:pt-20 lg:pt-24 xl:pt-28 2xl:pt-35.25 pb-[156.67px];
+    @apply pt-16 sm:pt-18 md:pt-20 lg:pt-24 xl:pt-28 2xl:pt-35.25 pb-20 sm:pb-24 md:pb-28 lg:pb-32 xl:pb-36 2xl:pb-[156.67px];
 }
 
 .team-section-inner {
-    @apply w-full max-w-[1550px] mx-auto flex items-center justify-between pb-[79.83px];
+    @apply w-full max-w-[1550px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-2 pb-8 sm:pb-10 md:pb-12 lg:pb-14 xl:pb-16 2xl:pb-[79.83px] px-4;
 }
 
 .team-title-lg {
-    @apply font-medium text-[56.4px] leading-[120%] tracking-[0%] text-[#D0D1E3];
+    @apply font-medium text-[24px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[48px] 2xl:text-[56.4px] leading-[120%] tracking-[0%] text-[#D0D1E3];
 }
 
 .team-section-desc {
-    @apply font-normal text-[15.67px] leading-[150%] tracking-[0%] text-[#7F8799];
+    @apply font-normal text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[15.67px] text-center md:text-start leading-[150%] tracking-[0%] text-[#7F8799];
 }
 
 .team-card-scroll {
-    @apply flex gap-[37.6px] pb-11.75;
+    @apply flex gap-3.75 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8 2xl:gap-[37.6px] pb-5 sm:pb-6 md:pb-8 lg:pb-9 xl:pb-10 2xl:pb-11.75;
 }
 
 .team-card {
-    @apply relative rounded-[18.8px] overflow-hidden bg-[#BAD6F705] shrink-0 snap-start w-152.5;
+    @apply relative rounded-[18.8px] overflow-hidden bg-[#BAD6F705] shrink-0 snap-start w-70 sm:w-80 md:w-90 lg:w-115 xl:w-135 2xl:w-152.5;
 }
 
 .team-card-border {
@@ -42,29 +42,28 @@
 }
 
 .team-card-body {
-    @apply flex-1 flex flex-col justify-between gap-[62.67px] rounded-[12.53px] bg-[#FFFFFF01] p-[18.8px];
+    @apply flex-1 flex flex-col justify-between gap-6 sm:gap-7 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-[62.67px] rounded-[12.53px] bg-[#FFFFFF01] p-2.75 sm:p-3 md:p-3.25 lg:p-3.5 xl:p-4 2xl:p-[18.8px];
     box-shadow: inset 0 0 37.6px rgba(199, 211, 234, 0.05);
 }
 
 .team-card-quote {
-    @apply font-normal text-[15.67px] leading-[140%] tracking-[0%] text-[#B4BBCC];
+    @apply font-normal text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[15.67px] leading-[140%] tracking-[0%] text-[#B4BBCC];
 }
 
 .team-card-role {
-    @apply font-normal text-[14.1px] leading-[145%] tracking-[0%] text-[#9DA4B2];
+    @apply font-normal text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14.1px] leading-[145%] tracking-[0%] text-[#9DA4B2];
 }
 
 .team-card-name {
-    @apply font-medium text-[15.67px] leading-[120%] tracking-[0%] text-[#D0D1E3];
+    @apply font-medium text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[15.67px] leading-[120%] tracking-[0%] text-[#D0D1E3];
 }
 
 .scroll-btn {
+    @apply w-9 sm:w-10 md:w-11 lg:w-12 xl:w-13 2xl:w-[62.67px] h-9 sm:h-10 md:h-11 lg:h-12 xl:h-13 2xl:h-[62.67px];
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 62.67px;
-    height: 62.67px;
     border-radius: 9999px;
     background: rgba(153, 193, 239, 0.039);
     backdrop-filter: blur(6.27px);

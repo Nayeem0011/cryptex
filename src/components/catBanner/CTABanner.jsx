@@ -1,7 +1,7 @@
 const CTABanner = () => {
     return (
         <div className='cta-banner'>
-            <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1191 398" preserveAspectRatio="none"
+            <svg className="absolute inset-0 w-full h-full pointer-events-none px-4" viewBox="0 0 1191 398" preserveAspectRatio="none"
                 fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_f_2509_2476)">
                     <ellipse cx="642.333" cy="200.158" rx="380.121" ry="47.3764" transform="rotate(-30 642.333 200.158)" fill="url(#paint0_linear_2509_2476)" />
@@ -32,12 +32,12 @@ const CTABanner = () => {
                     <span className='text-[#F5FCFF]'> to access best-in-breed <br className="hidden lg:block" /> cyber</span>
                     <span className='banner-title-gradient'> Security</span>
                 </h1>
-                <div className="flex items-center justify-center pt-[24.27px]">
+                <div className="flex items-center justify-center pt-3.75 md:pt-4 lg:pt-4.5 xl:pt-5 2xl:pt-[24.27px]">
                     <button className='btn-Run'>
                         <span className='btn-Run-label'>
                             Run The App
                         </span>
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg className="w-4 md:w-5 lg:w-6 xl:w-7 2xl:w-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="31.3333" height="31.3333" rx="15.6667" fill="white" />
                             <path d="M16.45 19.5833L20.3667 15.6667L16.45 11.75M20.3667 15.6667H10.9667" stroke="#0B0B20" stroke-width="1.01833" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>

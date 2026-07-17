@@ -14,7 +14,7 @@
 
 .section-subtitle-md {
     font-family: "Onest";
-    @apply max-w-115 mx-auto font-normal text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[17.23px] leading-[150%] tracking-[0%] text-[#818499] text-center md:text-left;
+    @apply max-w-115 mx-auto font-normal text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[17.23px] leading-[150%] tracking-[0%] text-[#818499] text-center md:text-left;
 }
 
 .btn-wallet {
