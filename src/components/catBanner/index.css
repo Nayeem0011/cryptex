@@ -1,3 +1,24 @@
+.cta-banner {
+    @apply relative w-full max-w-[1550px] mx-auto overflow-hidden;
+}
+
+.cta-banner-inner {
+    @apply relative z-10 rounded-[25.07px] bg-[#FFFFFF01] pt-[70.5px] pb-[76.77px];
+    box-shadow: inset 0 0 25.07px rgba(199, 211, 234, 0.04);
+}
+
+.cta-banner-title {
+    @apply font-medium text-[56.4px] leading-[150%] tracking-[0%] text-center;
+}
+
+.banner-title-gradient {
+    background: linear-gradient(93.43deg, #6F48DF 0.52%, #AB8EFF 27.29%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
 .btn-Run {
     @apply flex items-center pl-3.25 sm:pl-3.5 md:pl-3.75 lg:pl-4 xl:pl-5 2xl:pl-[25.07px] pr-[8.53px] md:pr-[9.53px] lg:pr-[10.53px] xl:pr-[11.53px] 2xl:pr-[12.53px] py-2 md:py-[9.53px] lg:py-[10.53px] xl:py-[11.53px] 2xl:py-[12.53px] gap-[4.83px] sm:gap-[5.83px] md:gap-[6.83px] lg:gap-[7.83px] rounded-[47px] backdrop-blur-[6.27px] cursor-pointer;
     background: linear-gradient(180deg, #4E27BC 0%, #A68AF9 100%);

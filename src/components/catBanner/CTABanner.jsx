@@ -1,6 +1,6 @@
 const CTABanner = () => {
     return (
-        <div className='relative w-full max-w-[1550px] mx-auto overflow-hidden'>
+        <div className='cta-banner'>
             <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1191 398" preserveAspectRatio="none"
                 fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_f_2509_2476)">
@@ -26,12 +26,11 @@ const CTABanner = () => {
                     </linearGradient>
                 </defs>
             </svg>
-
-            <div className='relative z-10 rounded-[25.07px] bg-[#FFFFFF01] shadow-[inset_0_0_25.07px_0_rgba(199,211,234,0.04)] pt-[70.5px] pb-[76.77px]'>
-                <h1 className='font-medium text-[56.4px] leading-[150%] tracking-[0%] text-center'>
-                    <span className='bg-[linear-gradient(93.43deg,#6F48DF_0.52%,#AB8EFF_27.29%)] bg-clip-text text-transparent'>Ready</span>
+            <div className='cta-banner-inner'>
+                <h1 className='cta-banner-title'>
+                    <span className='banner-title-gradient'>Ready</span>
                     <span className='text-[#F5FCFF]'> to access best-in-breed <br className="hidden lg:block" /> cyber</span>
-                    <span className='bg-[linear-gradient(93.43deg,#6F48DF_0.52%,#AB8EFF_27.29%)] bg-clip-text text-transparent'> Security</span>
+                    <span className='banner-title-gradient'> Security</span>
                 </h1>
                 <div className="flex items-center justify-center pt-[24.27px]">
                     <button className='btn-Run'>
@@ -42,7 +41,6 @@ const CTABanner = () => {
                             <rect width="31.3333" height="31.3333" rx="15.6667" fill="white" />
                             <path d="M16.45 19.5833L20.3667 15.6667L16.45 11.75M20.3667 15.6667H10.9667" stroke="#0B0B20" stroke-width="1.01833" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
-
                     </button>
                 </div>
             </div>
