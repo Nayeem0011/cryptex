@@ -16,13 +16,13 @@ const companies = [
 
 const Partners = () => {
     return (
-        <div id="buy-crx" className='w-full max-w-[1550px] mx-auto pt-16 sm:pt-18 md:pt-20 lg:pt-24 xl:pt-28 2xl:pt-35.25'>
-            <div className='flex items-center justify-between'>
-                <h1 className='font-medium text-[56.4px] leading-[120%] tracking-[0%] text-[#D0D1E3]'>
+        <div id="buy-crx" className='partners-section'>
+            <div className='partners-header'>
+                <h1 className='section-title-lg'>
                     Partners
                 </h1>
-                <div className='flex items-center justify-center gap-[7.83px]'>
-                    <p className='font-medium text-[17.23px] leading-[120%] tracking-[0%] text-[#D0D1E3]'>
+                <div className='partners-browse'>
+                    <p className='partners-browse-label'>
                         Browse audit reports
                     </p>
                     <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,11 +37,9 @@ const Partners = () => {
                     </svg>
                 </div>
             </div>
-            <div className='grid grid-cols-3 gap-[23.5px] pt-[46.37px]'>
+            <div className='partner-grid'>
                 {companies.map((item, index) => (
-                    <div
-                        key={index}
-                        className='relative w-full h-[155.1px] rounded-[25.07px] overflow-hidden bg-transparent shadow-[inset_0px_0px_37.6px_0px_rgba(199,211,234,0.05)]'>
+                    <div key={index} className='partner-card'>
                         <svg className="absolute inset-0 w-full h-full" viewBox="0 0 381 156" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                             <rect y="-130.033" width="380.7" height="285.133" fill="url(#paint0_radial_2509_2092)" />
                             <defs>
@@ -52,11 +50,11 @@ const Partners = () => {
                             </defs>
                         </svg>
                         {/* Content */}
-                        <div className="relative flex h-full items-center justify-center">
+                        <div className="partner-card-content">
                             <img
                                 src={item.logo}
                                 alt={`Company ${index + 1}`}
-                                className={`${item.width} object-contain transition-transform duration-300 hover:scale-105`}
+                                className={`partner-card-logo ${item.width}`}
                             />
                         </div>
                     </div>
@@ -71,11 +69,10 @@ const Partners = () => {
                         <rect width="21.9333" height="21.9333" rx="10.9667" fill="white" />
                         <path d="M11.6521 14.3937L15.0792 10.9666L11.6521 7.53955M15.0792 10.9666H6.85419" stroke="#05051F" stroke-width="1.01833" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
-
                 </button>
             </div>
         </div>
     )
 }
 
-export default Partners
+export default Partners;
