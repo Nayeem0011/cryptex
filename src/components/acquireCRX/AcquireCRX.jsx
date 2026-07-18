@@ -1,4 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 import icon4 from "../../assets/image/icon4.png";
 import icon5 from "../../assets/image/icon5.png";
@@ -50,12 +52,103 @@ const AcquireCRX = () => {
         }
     };
 
-    useEffect(() => {
-        updateSlider(activeButton);
-    }, [activeButton]);
+    // ---- GSAP refs ----
+    const sectionRef = useRef(null);
+    const headingRef = useRef(null);
+    const subTextRef = useRef(null);
+    const walletBtnRef = useRef(null);
+    const fromCardRef = useRef(null);
+    const tabsRef = useRef(null);
+    const fieldsRef = useRef([]);
+    const referencePriceRef = useRef(null);
+    const stepsRef = useRef([]);
+    const finalBtnRef = useRef(null);
+
+    const addFieldRef = (el) => {
+        if (el && !fieldsRef.current.includes(el)) {
+            fieldsRef.current.push(el);
+        }
+    };
+    const addStepRef = (el) => {
+        if (el && !stepsRef.current.includes(el)) {
+            stepsRef.current.push(el);
+        }
+    };
+
+    useGSAP(() => {
+        const tl = gsap.timeline({
+            defaults: { ease: "power3.out" },
+            scrollTrigger: {
+                trigger: sectionRef.current,
+                start: "top 75%",
+                once: true,
+            },
+        });
+
+        // ১. Left side: heading → subtext → button
+        tl.fromTo(
+            headingRef.current,
+            { opacity: 0, y: 25 },
+            { opacity: 1, y: 0, duration: 0.5 }
+        )
+            .fromTo(
+                subTextRef.current,
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.45 },
+                "-=0.25"
+            )
+            .fromTo(
+                walletBtnRef.current,
+                { opacity: 0, y: 15, scale: 0.95 },
+                { opacity: 1, y: 0, scale: 1, duration: 0.4 },
+                "-=0.2"
+            )
+            // ২. Right side card — ডান দিক থেকে ভেসে আসবে
+            .fromTo(
+                fromCardRef.current,
+                { opacity: 0, x: 40 },
+                { opacity: 1, x: 0, duration: 0.6 },
+                "-=0.5"
+            )
+            // ৩. Tabs (Buy / CRX)
+            .fromTo(
+                tabsRef.current,
+                { opacity: 0, y: -10 },
+                { opacity: 1, y: 0, duration: 0.4 },
+                "-=0.3"
+            )
+            // ৪. Payment input fields — stagger
+            .fromTo(
+                fieldsRef.current,
+                { opacity: 0, y: 15 },
+                { opacity: 1, y: 0, duration: 0.4, stagger: 0.12 },
+                "-=0.2"
+            )
+            // ৫. Reference price
+            .fromTo(
+                referencePriceRef.current,
+                { opacity: 0 },
+                { opacity: 1, duration: 0.35 },
+                "-=0.1"
+            )
+            // ৬. Steps — stagger
+            .fromTo(
+                stepsRef.current,
+                { opacity: 0, x: -15 },
+                { opacity: 1, x: 0, duration: 0.4, stagger: 0.12 },
+                "-=0.1"
+            )
+            // ৭. Final Connect Wallet button
+            .fromTo(
+                finalBtnRef.current,
+                { opacity: 0, y: 15, scale: 0.96 },
+                { opacity: 1, y: 0, scale: 1, duration: 0.45 },
+                "-=0.15"
+            );
+    }, { scope: sectionRef, dependencies: [] });
 
     return (
-        <div className='relative'>
+        <div ref={sectionRef} className='relative'>
             <svg className='absolute right-0 top-1/2 -translate-y-1/2 w-1/4' viewBox="0 0 697 1078" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_f_2509_2472)">
                     <ellipse cx="573.29" cy="538.929" rx="178.49" ry="144.129" fill="url(#paint0_linear_2509_2472)" />
@@ -76,14 +169,14 @@ const AcquireCRX = () => {
             <div className='main-card w-full max-w-[1550px] mx-auto px-2 sm:px-3 md:px-4'>
                 <div className='flex flex-col items-center md:items-start gap-3.25 sm:gap-3.5 md:gap-3.75 lg:gap-4 xl:gap-5 2xl:gap-[25.07px]'>
                     <div className='flex flex-col items-center md:items-start gap-1.25 sm:gap-2.5 md:gap-3 lg:gap-3.5 xl:gap-3.75 2xl:gap-[18.8px]'>
-                        <h1 className='section-title-md'>
+                        <h1 ref={headingRef} className='section-title-md'>
                             Acquire CRX <br className="hidden lg:block" /> Instantly
                         </h1>
-                        <p className='section-subtitle-md'>
+                        <p ref={subTextRef} className='section-subtitle-md'>
                             take advantage of a seamless, quick, <br className="hidden lg:block" /> and secure process to add CRX to your <br className="hidden lg:block" /> portfolio.
                         </p>
                     </div>
-                    <button className='btn-wallet'>
+                    <button ref={walletBtnRef} className='btn-wallet'>
                         <span className='btn-wallet-label'>
                             Connect Wallet
                         </span>
@@ -93,7 +186,7 @@ const AcquireCRX = () => {
                         </svg>
                     </button>
                 </div>
-                <div className="from-card">
+                <div ref={fromCardRef} className="from-card">
                     <div className="relative flex gap-[3.92px]">
                         {/* Sliding Background */}
                         <span
@@ -137,7 +230,7 @@ const AcquireCRX = () => {
                     <div className='flex flex-col gap-[15.67px]'>
                         <div className='flex flex-col gap-2 sm:gap-2.5 md:gap-3 lg:gap-3.5 xl:gap-4 2xl:gap-[18.8px]'>
                             {paymentFields.map((field) => (
-                                <div key={field.symbol} className='flex flex-col gap-1 sm:gap-1.25  md:gap-1.5 lg:gap-1.75 xl:gap-2 2xl:gap-[9.4px]'>
+                                <div key={field.symbol} ref={addFieldRef} className='flex flex-col gap-1 sm:gap-1.25  md:gap-1.5 lg:gap-1.75 xl:gap-2 2xl:gap-[9.4px]'>
                                     <label className='payment-field-label'>
                                         {field.label}
                                     </label>
@@ -161,7 +254,7 @@ const AcquireCRX = () => {
                                 </div>
                             ))}
                         </div>
-                        <div className="flex items-center justify-between">
+                        <div ref={referencePriceRef} className="flex items-center justify-between">
                             <p className="reference-price">
                                 Reference Price
                             </p>
@@ -172,7 +265,7 @@ const AcquireCRX = () => {
                     </div>
                     <div className="flex flex-col gap-[8.53px] md:gap-[10.53px] lg:gap-[12.53px]">
                         {steps.map((step) => (
-                            <div key={step.id} className="flex items-center gap-[6.4px] md:gap-[8.4px] lg:gap-[9.4px]">
+                            <div key={step.id} ref={addStepRef} className="flex items-center gap-[6.4px] md:gap-[8.4px] lg:gap-[9.4px]">
                                 <div className="step-number-card">
                                     <p className="step-number">
                                         {step.id}
@@ -184,7 +277,7 @@ const AcquireCRX = () => {
                             </div>
                         ))}
                     </div>
-                    <button className='btn-connect-wallet-full'>
+                    <button ref={finalBtnRef} className='btn-connect-wallet-full'>
                         Connect Wallet
                     </button>
                 </div>
@@ -193,5 +286,4 @@ const AcquireCRX = () => {
     )
 }
 
-export default AcquireCRX
-
+export default AcquireCRX;
