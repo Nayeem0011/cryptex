@@ -31,8 +31,6 @@ const Navbar = () => {
     const overlayRef = useRef(null);
     const menuBtnRef = useRef(null);
 
-
-
     const addLinkRef = (el) => {
         if (!el) return;
 

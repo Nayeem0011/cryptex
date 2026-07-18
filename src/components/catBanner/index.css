@@ -8,6 +8,7 @@
 }
 
 .cta-banner-title {
+    font-family: "Onest";
     @apply font-medium text-[24px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[48px] 2xl:text-[56.4px] leading-[130%] md:leading-[140%] lg:leading-[150%] tracking-[0%] text-center;
 }
 
