@@ -20,6 +20,27 @@
   --breakpoint-2xl: 1140px;
 }
 
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis:not(.lenis-autoToggle).lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
