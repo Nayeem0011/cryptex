@@ -1,3 +1,7 @@
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 import icon from "../../assets/image/icon.png";
 import icon2 from "../../assets/image/icon2.png";
 import icon3 from "../../assets/image/icon3.png";
@@ -87,6 +91,47 @@ const cards = [
 ];
 
 const CoreProducts = () => {
+    const sectionRef = useRef(null);
+    const titleRef = useRef(null);
+    const subtitleRef = useRef(null);
+    const cardsRef = useRef([]);
+
+    const addCardRef = (el) => {
+        if (!el) return;
+
+        if (!cardsRef.current.includes(el)) {
+            cardsRef.current.push(el);
+        }
+    };
+
+    useGSAP(() => {
+        const tl = gsap.timeline({
+            defaults: { ease: "power3.out" },
+            scrollTrigger: {
+                trigger: sectionRef.current,
+                start: "top 75%",
+                once: true,
+            },
+        });
+
+        tl.fromTo(
+            titleRef.current,
+            { opacity: 0, y: 25 },
+            { opacity: 1, y: 0, duration: 0.5 }
+        )
+            .fromTo(
+                subtitleRef.current,
+                { opacity: 0, y: 15 },
+                { opacity: 1, y: 0, duration: 0.4 },
+                "-=0.25"
+            )
+            .fromTo(
+                cardsRef.current,
+                { opacity: 0, y: 40, scale: 0.96 },
+                { opacity: 1, y: 0, scale: 1, duration: 0.55, stagger: 0.15 },
+                "-=0.15"
+            );
+    }, { scope: sectionRef, dependencies: [] });
 
     return (
         <div id="products" className='products-section relative'>
@@ -95,7 +140,7 @@ const CoreProducts = () => {
                     <ellipse cx="84.8187" cy="512.176" rx="184.161" ry="148.709" fill="url(#paint0_linear_2509_2471)" />
                 </g>
                 <defs>
-                    <filter id="filter0_f_2509_2471" x="-462.809" y="3.05176e-05" width="1095.26" height="1024.35" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <filter id="filter0_f_2509_2471" x="-462.809" y="3.05176e-05" width="1095.26" height="1024.35" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                         <feFlood flood-opacity="0" result="BackgroundImageFix" />
                         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                         <feGaussianBlur stdDeviation="181.733" result="effect1_foregroundBlur_2509_2471" />
@@ -108,10 +153,10 @@ const CoreProducts = () => {
             </svg>
 
             <div className='flex flex-col gap-2 sm:gap-2.5 md:gap-[12.53px]'>
-                <h1 className='products-section-title'>
+                <h1 ref={titleRef} className='products-section-title'>
                     Core Products
                 </h1>
-                <p className='products-section-subtitle'>
+                <p ref={subtitleRef} className='products-section-subtitle'>
                     Each product has been crafted with precision and innovation,{" "}
                     <br className="hidden md:block" />
                     ensuring top-notch quality and performance.
@@ -120,7 +165,7 @@ const CoreProducts = () => {
 
             <div className="products-grid">
                 {cards.map((card, index) => (
-                    <div key={index} className='product-card'>
+                    <div ref={addCardRef} key={index} className='product-card'>
                         <div className="absolute top-0 right-0 z-0 pointer-events-none">
                             <BgGr />
                         </div>
