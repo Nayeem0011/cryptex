@@ -17,6 +17,23 @@ const companies = [
 const Partners = () => {
     return (
         <div id="buy-crx" className='partners-section'>
+            <svg className='absolute left-0 top-10 lg:top-40 -translate-y-1/2 w-1/1' viewBox="0 0 1493 1032" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.7" filter="url(#filter0_f_2509_2474)">
+                    <ellipse cx="723.349" cy="515.874" rx="374.095" ry="121.073" fill="url(#paint0_linear_2509_2474)" />
+                </g>
+                <defs>
+                    <filter id="filter0_f_2509_2474" x="-45.5451" y="6.10352e-05" width="1537.79" height="1031.75" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                        <feGaussianBlur stdDeviation="197.4" result="effect1_foregroundBlur_2509_2474" />
+                    </filter>
+                    <linearGradient id="paint0_linear_2509_2474" x1="349.255" y1="515.874" x2="1097.44" y2="515.874" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#4F2AC0" />
+                        <stop offset="1" stop-color="#8B65FE" />
+                    </linearGradient>
+                </defs>
+            </svg>
+
             <div className='partners-header'>
                 <h1 className='section-title-lg'>
                     Partners

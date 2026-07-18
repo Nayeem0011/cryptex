@@ -1,13 +1,13 @@
 .footer {
-    @apply w-full max-w-[1550px] mx-auto pt-35.25 pb-[24.49px] px-4;
+    @apply relative pt-35.25 pb-[24.49px] px-4;
 }
 
 .footer-row {
-    @apply flex flex-col sm:flex-row items-start justify-between pb-[37.6px] gap-8;
+    @apply w-full max-w-[1550px] mx-auto flex flex-col sm:flex-row items-start justify-between pb-[37.6px] gap-8;
 }
 
 .footer-links-buttons {
-    @apply flex flex-col gap-6 sm:gap-7 md:gap-8 lg:gap-9 xl:gap-10 2xl:gap-11.75;
+    @apply z-10 flex flex-col gap-6 sm:gap-7 md:gap-8 lg:gap-9 xl:gap-10 2xl:gap-11.75;
 }
 
 .footer-nav-links {
@@ -28,7 +28,7 @@
 }
 
 .footer-social-btn {
-    @apply relative flex items-center justify-center w-8 sm:w-9 md:w-10 lg:w-11 xl:w-12 2xl:w-[48.57px] h-8 sm:h-9 md:h-10 lg:h-11 xl:h-12 2xl:h-[48.57px] rounded-full bg-[#FFFFFF0D];
+    @apply relative flex items-center justify-center w-8 sm:w-9 md:w-10 lg:w-11 xl:w-12 2xl:w-[48.57px] h-8 sm:h-9 md:h-10 lg:h-11 xl:h-12 2xl:h-[48.57px] rounded-full bg-[#FFFFFF0D] cursor-pointer;
 }
 
 .footer-social-btn-border {
@@ -44,7 +44,7 @@
 }
 
 .footer-subscribe {
-    @apply flex flex-col gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 2xl:gap-[28.2px];
+    @apply z-10 flex flex-col gap-2 sm:gap-3 md:gap-4 lg:gap-5 xl:gap-6 2xl:gap-[28.2px];
 }
 
 .footer-subscribe-label {
@@ -64,6 +64,7 @@
 }
 
 .footer-divider {
+    @apply w-full max-w-[1550px] mx-auto;
     width: 100%;
     border: none;
     border-top: 0.78px solid transparent;
@@ -71,13 +72,13 @@
 }
 
 .footer-divider-bottom {
-    @apply flex flex-col-reverse md:flex-row items-center justify-between gap-3 sm:gap-3.25 md:gap-3.5 lg:gap-3.75 xl:gap-4 pt-[18.18px];
+    @apply w-full max-w-[1550px] mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-3 sm:gap-3.25 md:gap-3.5 lg:gap-3.75 xl:gap-4 pt-[18.18px];
 }
 
 .footer-copy {
-    @apply font-normal text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14.1px] leading-[140%] tracking-[0%] text-[#7F8799] text-center md:text-left;
+    @apply z-10 font-normal text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14.1px] leading-[140%] tracking-[0%] text-[#7F8799] text-center md:text-left;
 }
 
 .footer-legal-link {
-    @apply font-normal text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14.1px] leading-[140%] tracking-[0%] text-[#7F8799];
+    @apply z-10 font-normal text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14.1px] leading-[140%] tracking-[0%] text-[#7F8799];
 }

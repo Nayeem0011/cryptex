@@ -89,7 +89,24 @@ const cards = [
 const CoreProducts = () => {
 
     return (
-        <div id="products" className='products-section'>
+        <div id="products" className='products-section relative'>
+            <svg className='absolute left-0 top-1/2 -translate-y-1/2 w-1/3 ' viewBox="0 0 633 1025" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_f_2509_2471)">
+                    <ellipse cx="84.8187" cy="512.176" rx="184.161" ry="148.709" fill="url(#paint0_linear_2509_2471)" />
+                </g>
+                <defs>
+                    <filter id="filter0_f_2509_2471" x="-462.809" y="3.05176e-05" width="1095.26" height="1024.35" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                        <feGaussianBlur stdDeviation="181.733" result="effect1_foregroundBlur_2509_2471" />
+                    </filter>
+                    <linearGradient id="paint0_linear_2509_2471" x1="-99.3428" y1="512.176" x2="268.98" y2="512.176" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#4F2AC0" />
+                        <stop offset="1" stop-color="#8B65FE" />
+                    </linearGradient>
+                </defs>
+            </svg>
+
             <div className='flex flex-col gap-2 sm:gap-2.5 md:gap-[12.53px]'>
                 <h1 className='products-section-title'>
                     Core Products

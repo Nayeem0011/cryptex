@@ -1,5 +1,5 @@
 .tokenomics {
-    @apply w-full bg-[#09091F] pb-1 xl:pb-16 2xl:pb-[73.63px] pt-8 sm:pt-9 md:pt-10 lg:pt-12 xl:pt-16 2xl:pt-[73.63px];
+    @apply relative w-full bg-[#09091F] pb-1 xl:pb-16 2xl:pb-[73.63px] pt-8 sm:pt-9 md:pt-10 lg:pt-12 xl:pt-16 2xl:pt-[73.63px];
 }
 
 .tokenomics-section {
@@ -7,7 +7,7 @@
 }
 
 .tokenomics-section-inner {
-    @apply flex flex-col items-start gap-3.75 md:gap-4 lg:gap-5 xl:gap-6 2xl:gap-[31.33px] px-4;
+    @apply flex flex-col items-start z-10 gap-3.75 md:gap-4 lg:gap-5 xl:gap-6 2xl:gap-[31.33px] px-4;
 }
 
 .tokenomics-section-header {

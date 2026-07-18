@@ -8,7 +8,7 @@
 }
 
 .team-section {
-    @apply pt-16 sm:pt-18 md:pt-20 lg:pt-24 xl:pt-28 2xl:pt-35.25 pb-20 sm:pb-24 md:pb-28 lg:pb-32 xl:pb-36 2xl:pb-[156.67px];
+    @apply relative pt-16 sm:pt-18 md:pt-20 lg:pt-24 xl:pt-28 2xl:pt-35.25 pb-20 sm:pb-24 md:pb-28 lg:pb-32 xl:pb-36 2xl:pb-[156.67px];
 }
 
 .team-section-inner {
@@ -16,11 +16,11 @@
 }
 
 .team-title-lg {
-    @apply font-medium text-[24px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[48px] 2xl:text-[56.4px] leading-[120%] tracking-[0%] text-[#D0D1E3];
+    @apply z-10 font-medium text-[24px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[48px] 2xl:text-[56.4px] leading-[120%] tracking-[0%] text-[#D0D1E3];
 }
 
 .team-section-desc {
-    @apply font-normal text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[15.67px] text-center md:text-start leading-[150%] tracking-[0%] text-[#7F8799];
+    @apply z-10 font-normal text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[15.67px] text-center md:text-start leading-[150%] tracking-[0%] text-[#7F8799];
 }
 
 .team-card-scroll {

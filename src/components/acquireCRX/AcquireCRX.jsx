@@ -55,8 +55,25 @@ const AcquireCRX = () => {
     }, [activeButton]);
 
     return (
-        <div className='w-full max-w-[1550px] mx-auto px-2 sm:px-3 md:px-4'>
-            <div className='main-card'>
+        <div className='relative'>
+            <svg className='absolute right-0 top-1/2 -translate-y-1/2 w-1/4' viewBox="0 0 697 1078" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_f_2509_2472)">
+                    <ellipse cx="573.29" cy="538.929" rx="178.49" ry="144.129" fill="url(#paint0_linear_2509_2472)" />
+                </g>
+                <defs>
+                    <filter id="filter0_f_2509_2472" x="0" y="6.10352e-05" width="1146.58" height="1077.86" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                        <feGaussianBlur stdDeviation="197.4" result="effect1_foregroundBlur_2509_2472" />
+                    </filter>
+                    <linearGradient id="paint0_linear_2509_2472" x1="394.8" y1="538.929" x2="751.779" y2="538.929" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#4F2AC0" />
+                        <stop offset="1" stop-color="#8B65FE" />
+                    </linearGradient>
+                </defs>
+            </svg>
+
+            <div className='main-card w-full max-w-[1550px] mx-auto px-2 sm:px-3 md:px-4'>
                 <div className='flex flex-col items-center md:items-start gap-3.25 sm:gap-3.5 md:gap-3.75 lg:gap-4 xl:gap-5 2xl:gap-[25.07px]'>
                     <div className='flex flex-col items-center md:items-start gap-1.25 sm:gap-2.5 md:gap-3 lg:gap-3.5 xl:gap-3.75 2xl:gap-[18.8px]'>
                         <h1 className='section-title-md'>

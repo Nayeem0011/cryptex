@@ -9,6 +9,19 @@ const footerLinks = [
 const Footer = () => {
     return (
         <div className='footer'>
+            <svg className="absolute bottom-0 left-0 w-1/3" height="613" viewBox="0 0 613 613" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.25" filter="url(#filter0_f_2509_2415)">
+                    <circle cx="-6.10352e-05" cy="612.567" r="181.733" fill="#9C6BF7" />
+                </g>
+                <defs>
+                    <filter id="filter0_f_2509_2415" x="-612.567" y="0.000183105" width="1225.13" height="1225.13" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                        <feGaussianBlur stdDeviation="215.417" result="effect1_foregroundBlur_2509_2415" />
+                    </filter>
+                </defs>
+            </svg>
+
             <div className='footer-row'>
                 <div className='footer-links-buttons'>
                     <div className="footer-nav-links">

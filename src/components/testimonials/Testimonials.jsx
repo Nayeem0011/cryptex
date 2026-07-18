@@ -67,6 +67,23 @@ const Testimonials = () => {
 
     return (
         <div id="team" className='team-section'>
+            <svg className="absolute top-1/2 -translate-y-1/2 w-1/1" viewBox="0 0 1504 1462" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.9" filter="url(#filter0_f_2509_225)">
+                    <ellipse cx="755.134" cy="730.553" rx="756.746" ry="76.407" transform="rotate(25.7322 755.134 730.553)" fill="url(#paint0_linear_2509_225)" />
+                </g>
+                <defs>
+                    <filter id="filter0_f_2509_225" x="-322.189" y="6.10352e-05" width="2154.65" height="1461.11" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                        <feGaussianBlur stdDeviation="197.4" result="effect1_foregroundBlur_2509_225" />
+                    </filter>
+                    <linearGradient id="paint0_linear_2509_225" x1="-1.61169" y1="730.553" x2="1511.88" y2="730.553" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#4F2AC0" />
+                        <stop offset="1" stop-color="#8B65FE" />
+                    </linearGradient>
+                </defs>
+            </svg>
+
             <div className='team-section-inner'>
                 <h1 className='team-title-lg'>
                     Powered by HashEx
@@ -81,7 +98,7 @@ const Testimonials = () => {
             </div>
             <div
                 ref={scrollRef}
-                className="team-card-scroll overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar">
+                className="z-10 team-card-scroll overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar">
                 {teamCards.map((item, index) => (
                     <div
                         key={index}

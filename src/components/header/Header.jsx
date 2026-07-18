@@ -50,7 +50,7 @@ const Header = () => {
                     </svg>
                 </div>
 
-                <div className="relative z-10 w-full h-full">
+                <div className="relative z-60 w-full h-full">
                     <Navbar />
                     <Hero />
                 </div>

@@ -97,12 +97,53 @@ const features = [
 
 const Tokenomics = () => {
     return (
-        <div id="tokenomics" className='w-full pt-16 sm:pt-18 md:pt-20 lg:pt-24 xl:pt-28 2xl:pt-35.25'>
+        <div id="tokenomics" className='relative w-full pt-16 sm:pt-18 md:pt-20 lg:pt-24 xl:pt-28 2xl:pt-35.25'>
+            <svg className='absolute left-0 top-1/2 -translate-y-1/1 w-1/5 z-10' viewBox="0 0 564 970" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_f_2509_2473)">
+                    <ellipse cx="50.595" cy="484.54" rx="149.938" ry="121.073" fill="url(#paint0_linear_2509_2473)" />
+                </g>
+                <defs>
+                    <filter id="filter0_f_2509_2473" x="-462.809" y="3.05176e-05" width="1026.81" height="969.08" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                        <feGaussianBlur stdDeviation="181.733" result="effect1_foregroundBlur_2509_2473" />
+                    </filter>
+                    <linearGradient id="paint0_linear_2509_2473" x1="-99.3428" y1="484.54" x2="200.533" y2="484.54" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#4F2AC0" />
+                        <stop offset="1" stop-color="#8B65FE" />
+                    </linearGradient>
+                </defs>
+            </svg>
+
             <div className='tokenomics'>
                 <div className='tokenomics-section'>
+                    <svg className='absolute right-0 top-0 max-w-139.5' height="550" viewBox="0 0 558 550" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.25" filter="url(#filter0_f_2509_2329)">
+                            <circle cx="495.067" cy="54.8329" r="181.733" fill="#613AD4" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_f_2509_2329" x="0" y="-440.234" width="990.133" height="990.133" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="156.667" result="effect1_foregroundBlur_2509_2329" />
+                            </filter>
+                        </defs>
+                    </svg>
+                    <svg className='absolute left-0 bottom-0 w-1/3' height="638" viewBox="0 0 653 638" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g opacity="0.25" filter="url(#filter0_f_2509_2330)">
+                            <circle cx="79.1161" cy="573.4" r="181.733" fill="#613AD4" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_f_2509_2330" x="-494.284" y="9.15527e-05" width="1146.8" height="1146.8" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                                <feGaussianBlur stdDeviation="195.833" result="effect1_foregroundBlur_2509_2330" />
+                            </filter>
+                        </defs>
+                    </svg>
                     <div className='tokenomics-section-inner'>
                         <div className='flex flex-col gap-5 md:gap-6 lg:gap-8 xl:gap-9 2xl:gap-[39.17px]'>
-                            <div className='flex flex-col gap-2 sm:gap-2.5 md:gap-3 lg:gap-[13.8px]'>
+                            <div className='flex flex-col gap-2 sm:gap-2.5 md:gap-3 lg:gap-[13.8px] z-10'>
                                 <h1 className='tokenomics-section-header'>
                                     Tokenomics Without <br className="hidden lg:block" /> the Price Tag
                                 </h1>
