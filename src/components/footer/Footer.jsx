@@ -1,3 +1,7 @@
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 const footerLinks = [
     { name: "Products", path: "#products" },
     { name: "Tokenomics", path: "#tokenomics" },
@@ -7,14 +11,58 @@ const footerLinks = [
 ];
 
 const Footer = () => {
+    const sectionRef = useRef(null);
+    const linksButtonsRef = useRef(null);
+    const subscribeRef = useRef(null);
+    const bottomRef = useRef(null);
+    const dividerRef = useRef(null);
+
+    useGSAP(() => {
+        // Divider — scale 0, grow 
+        gsap.set(dividerRef.current, { scaleX: 0, transformOrigin: "50% 50%" });
+
+        const tl = gsap.timeline({
+            defaults: { ease: "power3.out" },
+            scrollTrigger: {
+                trigger: sectionRef.current,
+                start: "top 80%",
+                once: true,
+            },
+        });
+
+        tl.fromTo(
+            linksButtonsRef.current,
+            { opacity: 0, y: 25 },
+            { opacity: 1, y: 0, duration: 0.5 }
+        )
+            .fromTo(
+                subscribeRef.current,
+                { opacity: 0, x: 30 },
+                { opacity: 1, x: 0, duration: 0.5 },
+                "-=0.35"
+            )
+            // ✅ Divider — grow
+            .to(dividerRef.current, {
+                scaleX: 1,
+                duration: 1.2,
+                ease: "power3.out"
+            })
+            .fromTo(
+                bottomRef.current,
+                { opacity: 0, y: 15 },
+                { opacity: 1, y: 0, duration: 0.6 },
+                "-=0.2"
+            );
+    }, { scope: sectionRef });
+
     return (
-        <div className='footer'>
+        <div ref={sectionRef} className='footer'>
             <svg className="absolute bottom-0 left-0 w-1/3" height="613" viewBox="0 0 613 613" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.25" filter="url(#filter0_f_2509_2415)">
                     <circle cx="-6.10352e-05" cy="612.567" r="181.733" fill="#9C6BF7" />
                 </g>
                 <defs>
-                    <filter id="filter0_f_2509_2415" x="-612.567" y="0.000183105" width="1225.13" height="1225.13" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <filter id="filter0_f_2509_2415" x="-612.567" y="0.000183105" width="1225.13" height="1225.13" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
                         <feFlood flood-opacity="0" result="BackgroundImageFix" />
                         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                         <feGaussianBlur stdDeviation="215.417" result="effect1_foregroundBlur_2509_2415" />
@@ -23,7 +71,7 @@ const Footer = () => {
             </svg>
 
             <div className='footer-row'>
-                <div className='footer-links-buttons'>
+                <div ref={linksButtonsRef} className='footer-links-buttons'>
                     <div className="footer-nav-links">
                         {footerLinks.map((item) => (
                             <a
@@ -57,7 +105,7 @@ const Footer = () => {
                                 {/* Gradient border */}
                                 <div className="footer-social-btn-border" />
                                 <svg className="w-4.5 md:w-5 lg:w-5.25 xl:w-5.5 2xl:w-5.75" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6949 4.5695C18.5638 4.20364 19.4953 4.93838 19.3419 5.8686L17.5297 16.8559C17.355 17.9152 16.1915 18.5231 15.2195 17.9952C14.4062 17.5534 13.1996 16.8735 12.1121 16.1629C11.5691 15.8081 9.9063 14.6703 10.1107 13.8603C10.2854 13.1678 13.0808 10.5657 14.6781 9.01829C15.3056 8.41044 15.0198 8.05928 14.2788 8.61895C12.4405 10.0073 9.48925 12.1181 8.51329 12.7122C7.6522 13.2363 7.20261 13.3258 6.66633 13.2363C5.68704 13.0731 4.77912 12.8204 4.03788 12.5132C3.03603 12.0979 3.08483 10.7211 4.0372 10.3201L17.6949 4.5695Z" fill="url(#paint0_linear_2509_2437)" />
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M17.6949 4.5695C18.5638 4.20364 19.4953 4.93838 19.3419 5.8686L17.5297 16.8559C17.355 17.9152 16.1915 18.5231 15.2195 17.9952C14.4062 17.5534 13.1996 16.8735 12.1121 16.1629C11.5691 15.8081 9.9063 14.6703 10.1107 13.8603C10.2854 13.1678 13.0808 10.5657 14.6781 9.01829C15.3056 8.41044 15.0198 8.05928 14.2788 8.61895C12.4405 10.0073 9.48925 12.1181 8.51329 12.7122C7.6522 13.2363 7.20261 13.3258 6.66633 13.2363C5.68704 13.0731 4.77912 12.8204 4.03788 12.5132C3.03603 12.0979 3.08483 10.7211 4.0372 10.3201L17.6949 4.5695Z" fill="url(#paint0_linear_2509_2437)" />
                                     <defs>
                                         <linearGradient id="paint0_linear_2509_2437" x1="11.3316" y1="4.47363" x2="11.3316" y2="18.1889" gradientUnits="userSpaceOnUse">
                                             <stop stop-color="#4E27BC" />
@@ -82,7 +130,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className='footer-subscribe'>
+                <div ref={subscribeRef} className='footer-subscribe'>
                     <p className='footer-subscribe-label'>
                         Subscribe
                     </p>
@@ -106,8 +154,8 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="footer-divider"></div>
-            <div className="footer-divider-bottom">
+            <div ref={dividerRef} className="footer-divider"></div>
+            <div ref={bottomRef} className="footer-divider-bottom">
                 <p className="footer-copy">
                     &copy; CryptEx. All rights reserved.
                 </p>
