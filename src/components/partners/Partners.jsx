@@ -1,3 +1,7 @@
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 import company from "../../assets/image/company_logo.png";
 import company2 from "../../assets/image/company_logo2.png";
 import company3 from "../../assets/image/company_logo3.png";
@@ -15,8 +19,59 @@ const companies = [
 ];
 
 const Partners = () => {
+    const sectionRef = useRef(null);
+    const titleRef = useRef(null);
+    const browseRef = useRef(null);
+    const cardsRef = useRef([]);
+    const btnRef = useRef(null);
+
+    const addCardRef = (el) => {
+        if (el && !cardsRef.current.includes(el)) {
+            cardsRef.current.push(el);
+        }
+    };
+
+    useGSAP(() => {
+        const tl = gsap.timeline({
+            defaults: { ease: "power3.out" },
+            scrollTrigger: {
+                trigger: sectionRef.current,
+                start: "top 75%",
+                once: true,
+            },
+        });
+
+        // 1. Title
+        tl.fromTo(
+            titleRef.current,
+            { opacity: 0, x: -30 },
+            { opacity: 1, x: 0, duration: 0.5 }
+        )
+            // 2. Browse audit reports link
+            .fromTo(
+                browseRef.current,
+                { opacity: 0, x: 20 },
+                { opacity: 1, x: 0, duration: 0.4 },
+                "-=0.35"
+            )
+            // 3. Partner cards — grid stagger
+            .fromTo(
+                cardsRef.current,
+                { opacity: 0, y: 30, scale: 0.94 },
+                { opacity: 1, y: 0, scale: 1, duration: 0.5, stagger: 0.08 },
+                "-=0.15"
+            )
+            // 4. See all clients button
+            .fromTo(
+                btnRef.current,
+                { opacity: 0, y: 15, scale: 0.95 },
+                { opacity: 1, y: 0, scale: 1, duration: 0.4 },
+                "-=0.2"
+            );
+    }, { scope: sectionRef });
+
     return (
-        <div id="buy-crx" className='partners-section'>
+        <div ref={sectionRef} id="buy-crx" className='partners-section'>
             <svg className='absolute left-0 top-10 lg:top-40 -translate-y-1/2 w-1/1' viewBox="0 0 1493 1032" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.7" filter="url(#filter0_f_2509_2474)">
                     <ellipse cx="723.349" cy="515.874" rx="374.095" ry="121.073" fill="url(#paint0_linear_2509_2474)" />
@@ -35,10 +90,10 @@ const Partners = () => {
             </svg>
 
             <div className='partners-header'>
-                <h1 className='section-title-lg'>
+                <h1 ref={titleRef} className='section-title-lg'>
                     Partners
                 </h1>
-                <div className='partners-browse'>
+                <div ref={browseRef} className='partners-browse'>
                     <p className='partners-browse-label'>
                         Browse audit reports
                     </p>
@@ -56,7 +111,7 @@ const Partners = () => {
             </div>
             <div className='partner-grid'>
                 {companies.map((item, index) => (
-                    <div key={index} className='partner-card'>
+                    <div key={index} ref={addCardRef} className='partner-card'>
                         <svg className="absolute inset-0 w-full h-full" viewBox="0 0 381 156" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
                             <rect y="-130.033" width="380.7" height="285.133" fill="url(#paint0_radial_2509_2092)" />
                             <defs>
@@ -78,7 +133,7 @@ const Partners = () => {
                 ))}
             </div>
             <div className="flex items-center justify-center pt-5 md:pt-6 lg:pt-7 xl:pt-8 2xl:pt-[37.6px]">
-                <button className='btn-clients'>
+                <button ref={btnRef} className='btn-clients'>
                     <span className='btn-clients-label'>
                         See all clients
                     </span>
