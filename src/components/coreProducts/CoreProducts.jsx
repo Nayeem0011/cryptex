@@ -134,7 +134,7 @@ const CoreProducts = () => {
     }, { scope: sectionRef, dependencies: [] });
 
     return (
-        <div id="products" className='products-section relative'>
+        <div ref={sectionRef} id="products" className='products-section relative'>
             <svg className='absolute left-0 top-1/2 -translate-y-1/2 w-1/3 ' viewBox="0 0 633 1025" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_f_2509_2471)">
                     <ellipse cx="84.8187" cy="512.176" rx="184.161" ry="148.709" fill="url(#paint0_linear_2509_2471)" />

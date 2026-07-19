@@ -1,3 +1,7 @@
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 import image from "../../assets/image/tokenomics.png";
 
 const Icon = ({ type }) => {
@@ -96,8 +100,146 @@ const features = [
 ];
 
 const Tokenomics = () => {
+    const sectionRef = useRef(null);
+    const headingRef = useRef(null);
+    const descRef = useRef(null);
+    const featureItemsRef = useRef([]);
+    const stakingBtnRef = useRef(null);
+    const imageRef = useRef(null);
+    const verticalLineRef = useRef(null);
+    const horizontalLineRef = useRef(null);
+
+    const addFeatureRef = (el) => {
+        if (el && !featureItemsRef.current.includes(el)) {
+            featureItemsRef.current.push(el);
+        }
+    };
+
+    useGSAP(() => {
+        gsap.set(verticalLineRef.current, {
+            scaleY: 0,
+            transformOrigin: "50% 50%",
+        });
+
+        gsap.set(horizontalLineRef.current, {
+            scaleX: 0,
+            transformOrigin: "50% 50%",
+        });
+
+        const tl = gsap.timeline({
+            defaults: { ease: "power3.out" },
+            scrollTrigger: {
+                trigger: sectionRef.current,
+                start: "top 75%",
+                once: true,
+            },
+        });
+
+        tl
+            // Heading
+            .fromTo(
+                headingRef.current,
+                {
+                    opacity: 0,
+                    y: 25,
+                },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.5,
+                }
+            )
+
+            // Description
+            .fromTo(
+                descRef.current,
+                {
+                    opacity: 0,
+                    y: 20,
+                },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.45,
+                },
+                "-=0.25"
+            )
+
+            // Vertical Line
+            .to(
+                verticalLineRef.current,
+                {
+                    scaleY: 1,
+                    duration: 0.7,
+                    ease: "power2.inOut",
+                },
+                "-=0.1"
+            )
+
+            // Horizontal Line
+            .to(
+                horizontalLineRef.current,
+                {
+                    scaleX: 1,
+                    duration: 0.7,
+                    ease: "power2.inOut",
+                },
+                "<"
+            )
+
+            // Feature Cards
+            .fromTo(
+                featureItemsRef.current,
+                {
+                    opacity: 0,
+                    y: 25,
+                },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.5,
+                    stagger: 0.12,
+                },
+                "-=0.2"
+            )
+
+            // Button
+            .fromTo(
+                stakingBtnRef.current,
+                {
+                    opacity: 0,
+                    y: 15,
+                    scale: 0.95,
+                },
+                {
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                    duration: 0.4,
+                },
+                "-=0.2"
+            )
+
+            // Image
+            .fromTo(
+                imageRef.current,
+                {
+                    opacity: 0,
+                    x: 40,
+                },
+                {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.6,
+                },
+                "-=0.5"
+            );
+    }, {
+        scope: sectionRef,
+    });
+
     return (
-        <div id="tokenomics" className='relative w-full pt-16 sm:pt-18 md:pt-20 lg:pt-24 xl:pt-28 2xl:pt-35.25'>
+        <div ref={sectionRef} id="tokenomics" className='relative w-full pt-16 sm:pt-18 md:pt-20 lg:pt-24 xl:pt-28 2xl:pt-35.25'>
             <svg className='absolute left-0 top-1/2 -translate-y-1/1 w-1/5 z-10' viewBox="0 0 564 970" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_f_2509_2473)">
                     <ellipse cx="50.595" cy="484.54" rx="149.938" ry="121.073" fill="url(#paint0_linear_2509_2473)" />
@@ -144,15 +286,15 @@ const Tokenomics = () => {
                     <div className='tokenomics-section-inner'>
                         <div className='flex flex-col gap-5 md:gap-6 lg:gap-8 xl:gap-9 2xl:gap-[39.17px]'>
                             <div className='flex flex-col gap-2 sm:gap-2.5 md:gap-3 lg:gap-[13.8px] z-10'>
-                                <h1 className='tokenomics-section-header'>
+                                <h1 ref={headingRef} className='tokenomics-section-header'>
                                     Tokenomics Without <br className="hidden lg:block" /> the Price Tag
                                 </h1>
-                                <p className='tokenomics-section-desc'>
+                                <p ref={descRef} className='tokenomics-section-desc'>
                                     Provides businesses with the opportunity to design and implement <br className="hidden lg:block" /> robust tokenomics models without the burden of high costs. By <br className="hidden lg:block" /> removing financial barriers.
                                 </p>
                             </div>
                             <div className="feature-section-main">
-                                <svg width="2" className='h-full absolute left-1/2 -translate-x-1/2 top-0 sm:block hidden' viewBox="0 0 2 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg ref={verticalLineRef} width="2" className='h-full absolute left-1/2 -translate-x-1/2 top-0 sm:block hidden' viewBox="0 0 2 270" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <line x1="1.30866" y1="0.475475" x2="1.30865" y2="269.942" stroke="url(#paint0_linear_1239_2380)" stroke-width="0.783333" />
                                     <line x1="1.30866" y1="0.475475" x2="1.30865" y2="269.942" stroke="url(#paint1_linear_1239_2380)" stroke-width="0.783333" />
                                     <defs>
@@ -171,7 +313,7 @@ const Tokenomics = () => {
                                 </svg>
                                 <div className="feature-section">
                                     {features.slice(0, 2).map((item, index) => (
-                                        <div key={index} className="feature-item">
+                                        <div key={index} ref={addFeatureRef} className="feature-item">
                                             <div className="feature-itemcard">
                                                 <div className="feature-icon-wrap">
                                                     <Icon type={item.icon} />
@@ -188,7 +330,7 @@ const Tokenomics = () => {
                                         </div>
                                     ))}
                                 </div>
-                                <svg className='w-full sm:block hidden' height="1" viewBox="0 0 568 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg ref={horizontalLineRef} className='w-full sm:block hidden' height="1" viewBox="0 0 568 1" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <line x1="567.017" y1="0.600483" x2="0.667114" y2="0.600483" stroke="url(#paint0_linear_1239_2381)" stroke-width="0.783333" />
                                     <defs>
                                         <linearGradient id="paint0_linear_1239_2381" x1="567.017" y1="-0.291183" x2="0.667114" y2="-0.291183" gradientUnits="userSpaceOnUse">
@@ -201,7 +343,7 @@ const Tokenomics = () => {
                                 </svg>
                                 <div className="feature-section">
                                     {features.slice(2).map((item, index) => (
-                                        <div key={index} className="feature-item">
+                                        <div key={index} ref={addFeatureRef} className="feature-item">
                                             <div className="feature-itemcard">
                                                 <div className="feature-icon-wrap">
                                                     <Icon type={item.icon} />
@@ -221,7 +363,7 @@ const Tokenomics = () => {
                             </div>
 
                         </div>
-                        <button className='btn-staking'>
+                        <button ref={stakingBtnRef} className='btn-staking'>
                             <span className='btn-staking-label'>
                                 Start Staking
                             </span>
@@ -231,7 +373,7 @@ const Tokenomics = () => {
                             </svg>
                         </button>
                     </div>
-                    <img src={image} alt="Tokenomics" className="w-fit h-full" />
+                    <img ref={imageRef} src={image} alt="Tokenomics" className="w-fit h-full" />
                 </div>
             </div>
         </div>

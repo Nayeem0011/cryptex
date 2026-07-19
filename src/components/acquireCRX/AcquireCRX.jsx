@@ -85,7 +85,7 @@ const AcquireCRX = () => {
             },
         });
 
-        // ১. Left side: heading → subtext → button
+        // 1. Left side: heading → subtext → button
         tl.fromTo(
             headingRef.current,
             { opacity: 0, y: 25 },
@@ -103,42 +103,42 @@ const AcquireCRX = () => {
                 { opacity: 1, y: 0, scale: 1, duration: 0.4 },
                 "-=0.2"
             )
-            // ২. Right side card — ডান দিক থেকে ভেসে আসবে
+            // 2. Right side card
             .fromTo(
                 fromCardRef.current,
                 { opacity: 0, x: 40 },
                 { opacity: 1, x: 0, duration: 0.6 },
                 "-=0.5"
             )
-            // ৩. Tabs (Buy / CRX)
+            // 3. Tabs (Buy / CRX)
             .fromTo(
                 tabsRef.current,
                 { opacity: 0, y: -10 },
                 { opacity: 1, y: 0, duration: 0.4 },
                 "-=0.3"
             )
-            // ৪. Payment input fields — stagger
+            // 4. Payment input fields — stagger
             .fromTo(
                 fieldsRef.current,
                 { opacity: 0, y: 15 },
                 { opacity: 1, y: 0, duration: 0.4, stagger: 0.12 },
                 "-=0.2"
             )
-            // ৫. Reference price
+            // 5. Reference price
             .fromTo(
                 referencePriceRef.current,
                 { opacity: 0 },
                 { opacity: 1, duration: 0.35 },
                 "-=0.1"
             )
-            // ৬. Steps — stagger
+            // 6. Steps — stagger
             .fromTo(
                 stepsRef.current,
                 { opacity: 0, x: -15 },
                 { opacity: 1, x: 0, duration: 0.4, stagger: 0.12 },
                 "-=0.1"
             )
-            // ৭. Final Connect Wallet button
+            // 7. Final Connect Wallet button
             .fromTo(
                 finalBtnRef.current,
                 { opacity: 0, y: 15, scale: 0.96 },
