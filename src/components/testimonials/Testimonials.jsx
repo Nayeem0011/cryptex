@@ -1,4 +1,6 @@
 import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 import company7 from "../../assets/image/company_logo7.png";
 import company8 from "../../assets/image/company_logo8.png";
@@ -47,7 +49,19 @@ const teamCards = [
 ];
 
 const Testimonials = () => {
+    const sectionRef = useRef(null);
+    const titleRef = useRef(null);
+    const descRef = useRef(null);
     const scrollRef = useRef(null);
+    const cardsRef = useRef([]);
+    const leftBtnRef = useRef(null);
+    const rightBtnRef = useRef(null);
+
+    const addCardRef = (el) => {
+        if (el && !cardsRef.current.includes(el)) {
+            cardsRef.current.push(el);
+        }
+    };
 
     const scrollByCards = (direction) => {
         if (!scrollRef.current) return;
@@ -65,8 +79,52 @@ const Testimonials = () => {
         });
     };
 
+    useGSAP(() => {
+        const tl = gsap.timeline({
+            defaults: { ease: "power3.out" },
+            scrollTrigger: {
+                trigger: sectionRef.current,
+                start: "top 75%",
+                once: true,
+            },
+        });
+
+        tl.fromTo(
+            titleRef.current,
+            { opacity: 0, y: 25 },
+            { opacity: 1, y: 0, duration: 0.5 }
+        )
+            .fromTo(
+                descRef.current,
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.45 },
+                "-=0.25"
+            )
+            .fromTo(
+                cardsRef.current,
+                { opacity: 0, y: 35, scale: 0.95 },
+                { opacity: 1, y: 0, scale: 1, duration: 0.5, stagger: 0.1 },
+                "-=0.15"
+            )
+            // ✅ button
+            .fromTo(
+                leftBtnRef.current,
+                { opacity: 0, x: -20 },
+                { opacity: 1, x: 0, duration: 0.4 },
+                "-=0.2"
+            )
+            // ✅ button 
+            .fromTo(
+                rightBtnRef.current,
+                { opacity: 0, x: 20 },
+                { opacity: 1, x: 0, duration: 0.4 },
+                "<"
+            );
+    }, { scope: sectionRef });
+
+
     return (
-        <div id="team" className='team-section'>
+        <div ref={sectionRef} id="team" className='team-section'>
             <svg className="absolute top-1/2 -translate-y-1/2 w-1/1" viewBox="0 0 1504 1462" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.9" filter="url(#filter0_f_2509_225)">
                     <ellipse cx="755.134" cy="730.553" rx="756.746" ry="76.407" transform="rotate(25.7322 755.134 730.553)" fill="url(#paint0_linear_2509_225)" />
@@ -85,10 +143,10 @@ const Testimonials = () => {
             </svg>
 
             <div className='team-section-inner'>
-                <h1 className='team-title-lg'>
+                <h1 ref={titleRef} className='team-title-lg'>
                     Powered by HashEx
                 </h1>
-                <p className='team-section-desc'>
+                <p ref={descRef} className='team-section-desc'>
                     HashEx is a leading tech advisory firm in the
                     <br className="hidden lg:block" />
                     EMEA region, renowned for its impactful
@@ -101,7 +159,7 @@ const Testimonials = () => {
                 className="z-10 team-card-scroll overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar">
                 {teamCards.map((item, index) => (
                     <div
-                        key={index}
+                        key={index} ref={addCardRef}
                         data-card
                         className="team-card" >
                         {/* Gradient border */}
@@ -151,6 +209,7 @@ const Testimonials = () => {
             </div>
             <div className='flex justify-center gap-[10.8px] sm:gap-[12.8px] md:gap-[16.8px] lg:gap-[18.8px]'>
                 <button
+                    ref={leftBtnRef}
                     type="button"
                     onClick={() => scrollByCards(-1)}
                     className="scroll-btn">
@@ -161,6 +220,7 @@ const Testimonials = () => {
                     </svg>
                 </button>
                 <button
+                    ref={rightBtnRef}
                     type="button"
                     onClick={() => scrollByCards(1)}
                     className="scroll-btn">
