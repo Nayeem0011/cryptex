@@ -7,7 +7,21 @@
 
 .crx-navbar-link {
     font-family: "DM Sans";
-    @apply text-[#CDD6DA] text-[14.1px] font-normal leading-[120%] tracking-[0%];
+    @apply relative text-[#CDD6DA] text-[14.1px] font-normal leading-[120%] transition-colors duration-300;
+}
+
+.crx-navbar-link::after {
+    content: "";
+    @apply absolute left-0 -bottom-1 w-0 h-0.5 rounded-full transition-all duration-300;
+    background: linear-gradient(90deg, #4E27BC, #A68AF9);
+}
+
+.crx-navbar-link:hover {
+    @apply text-white;
+}
+
+.crx-navbar-link:hover::after {
+    @apply w-full;
 }
 
 .crx-icon-btn {
@@ -21,7 +35,7 @@
 }
 
 .crx-icon-btn-border {
-    @apply absolute inset-0 rounded-[47px] p-[0.78px];
+    @apply absolute inset-0 rounded-[47px] p-[0.78px] pointer-events-none;
     background: linear-gradient(180deg, #1B1C33 0%, rgba(34, 35, 56, 0) 100%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;

@@ -27,10 +27,10 @@ CryptEx is a modern, animated landing page for a DeFi security & tokenomics plat
 ```
 
 src/
-├── assets/              # Fonts & images
+├── assets/               # Fonts & images
 ├── components/
-│   ├── navbar/          # Sticky navbar with scroll hide/show + mobile sidebar
-│   ├── header/          # Hero wrapper
+│   ├── navbar/           # Sticky navbar with scroll hide/show + mobile sidebar
+│   ├── header/           # Hero wrapper
 │   ├── heroSection/      # Hero heading, stats counter, CTA button
 │   ├── coreProducts/     # Product feature cards
 │   ├── acquireCRX/       # Token purchase widget
@@ -116,4 +116,4 @@ This project is private and intended for internal/demo use only.
 
 ---
 
-<p align="center">Built with ❤️ using React, Tailwind & GSAP</p>
+<p align="center">Built Nayeem ❤️</p>

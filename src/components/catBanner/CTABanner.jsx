@@ -74,11 +74,11 @@ const CTABanner = () => {
                     <span className='banner-title-gradient'> Security</span>
                 </h1>
                 <div ref={buttonRef} className="flex items-center justify-center pt-3.75 md:pt-4 lg:pt-4.5 xl:pt-5 2xl:pt-[24.27px]">
-                    <button className='btn-Run'>
+                    <button className='btn-Run group'>
                         <span className='btn-Run-label'>
                             Run The App
                         </span>
-                        <svg className="w-4 md:w-5 lg:w-6 xl:w-7 2xl:w-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg className="w-4 md:w-5 lg:w-6 xl:w-7 2xl:w-8 transition-transform duration-300 ease-out group-hover:translate-x-1" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect width="31.3333" height="31.3333" rx="15.6667" fill="white" />
                             <path d="M16.45 19.5833L20.3667 15.6667L16.45 11.75M20.3667 15.6667H10.9667" stroke="#0B0B20" strokeWidth="1.01833" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>

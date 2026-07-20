@@ -212,10 +212,10 @@ const Testimonials = () => {
                     ref={leftBtnRef}
                     type="button"
                     onClick={() => scrollByCards(-1)}
-                    className="scroll-btn">
+                    className="scroll-btn group">
                     {/* Gradient border */}
                     <div className="scroll-btn-border scroll-btn-border-left" />
-                    <svg className="w-4 sm:w-4.5 md:w-5 lg:w-5.5 xl:w-6 2xl:w-6.5" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-4 sm:w-4.5 md:w-5 lg:w-5.5 xl:w-6 2xl:w-6.5 transition-transform duration-300 group-hover:-translate-x-1" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10.9666 20.3669L3.1333 12.5335L10.9666 4.7002M3.1333 12.5335H21.9333" stroke="white" stroke-width="1.56667" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
@@ -223,10 +223,10 @@ const Testimonials = () => {
                     ref={rightBtnRef}
                     type="button"
                     onClick={() => scrollByCards(1)}
-                    className="scroll-btn">
+                    className="scroll-btn group">
                     {/* Gradient border */}
                     <div className="scroll-btn-border scroll-btn-border-right" />
-                    <svg className="w-4 sm:w-4.5 md:w-5 lg:w-5.5 xl:w-6 2xl:w-6.5" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-4 sm:w-4.5 md:w-5 lg:w-5.5 xl:w-6 2xl:w-6.5 transition-transform duration-300 ease-out group-hover:translate-x-1" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.1 20.3669L21.9334 12.5335L14.1 4.7002M21.9334 12.5335H3.13336" stroke="white" stroke-width="1.56667" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>

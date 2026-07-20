@@ -147,11 +147,11 @@ const Hero = () => {
                             These standards act as a foundation, guiding organizations in implementing best <br className="hidden lg:block" /> practices to protect sensitive data and thwart cyber threats.
                         </p>
                     </div>
-                    <button ref={buttonRef} className='btn-run-app'>
+                    <button ref={buttonRef} className='btn-run-app group'>
                         <span className='btn-run-app-label '>
                             Run The App
                         </span>
-                        <span className="btn-run-app-icon">
+                        <span className="btn-run-app-icon transition-transform duration-300 ease-out group-hover:translate-x-1">
                             <svg className="w-1.75 sm:w-2 md:w-2.25 lg:w-2.5 xl:w-2.75 h-1.75 sm:h-2 md:h-2.25 lg:h-2.5 xl:h-2.75" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6.16877 8.91044L9.59585 5.48336L6.16877 2.05627M9.59585 5.48336H1.37085" stroke="white" stroke-width="1.01833" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>

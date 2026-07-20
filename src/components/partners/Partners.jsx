@@ -93,11 +93,11 @@ const Partners = () => {
                 <h1 ref={titleRef} className='section-title-lg'>
                     Partners
                 </h1>
-                <div ref={browseRef} className='partners-browse'>
+                <div ref={browseRef} className='partners-browse group'>
                     <p className='partners-browse-label'>
                         Browse audit reports
                     </p>
-                    <svg className="w-4.5 sm:w-5 md:w-5.5 lg:w-6 xl:w-6.5 2xl:w-[28.2px] h-4.5 sm:h-5 md:h-5.5 lg:h-6 xl:h-6.5 2xl:h-[28.2px]" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-4.5 sm:w-5 md:w-5.5 lg:w-6 xl:w-6.5 2xl:w-[28.2px] h-4.5 sm:h-5 md:h-5.5 lg:h-6 xl:h-6.5 2xl:h-[28.2px] transition-transform duration-300 ease-out group-hover:translate-x-1" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="28.2" height="28.2" rx="14.1" fill="url(#paint0_linear_2509_2054)" />
                         <path d="M14.8834 18.0167L18.8 14.1L14.8834 10.1833M18.8 14.1H9.40002" stroke="white" stroke-width="1.01833" stroke-linecap="round" stroke-linejoin="round" />
                         <defs>
@@ -133,11 +133,11 @@ const Partners = () => {
                 ))}
             </div>
             <div className="flex items-center justify-center pt-5 md:pt-6 lg:pt-7 xl:pt-8 2xl:pt-[37.6px]">
-                <button ref={btnRef} className='btn-clients'>
+                <button ref={btnRef} className='btn-clients group'>
                     <span className='btn-clients-label'>
                         See all clients
                     </span>
-                    <svg className="w-3.5 md:w-4 lg:w-4.5 xl:w-5 2xl:w-5.5 h-3.5 md:h-3.5 lg:h-4 xl:h-5 2xl:h-5.5" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-3.5 md:w-4 lg:w-4.5 xl:w-5 2xl:w-5.5 h-3.5 md:h-3.5 lg:h-4 xl:h-5 2xl:h-5.5 transition-transform duration-300 ease-out group-hover:translate-x-1" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="21.9333" height="21.9333" rx="10.9667" fill="white" />
                         <path d="M11.6521 14.3937L15.0792 10.9666L11.6521 7.53955M15.0792 10.9666H6.85419" stroke="#05051F" stroke-width="1.01833" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>

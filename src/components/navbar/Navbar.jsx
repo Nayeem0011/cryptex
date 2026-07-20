@@ -182,7 +182,7 @@ const Navbar = () => {
                     <img
                         ref={logoRef}
                         onClick={scrollToTop}
-                        src={navbar_logo} alt="Logo"
+                        src={navbar_logo}
                         alt="Logo"
                         className="h-[31.33px] w-[110.5999984741211px] cursor-pointer"
                     />
@@ -206,20 +206,20 @@ const Navbar = () => {
                         ))}
                     </div>
                     <div ref={iconsWrapRef} className="hidden md:flex gap-[9.4px]">
-                        <div className="crx-icon-btn">
+                        <button className="crx-icon-btn group overflow-visible">
                             <div className="crx-icon-btn-border" />
-                            <img src={navbar_logo2} alt="Logo" className="h-[21.933332443237305px] w-[21.933332443237305px]" />
-                        </div>
-                        <div className="crx-icon-btn">
+                            <img src={navbar_logo2} alt="Logo" className="h-[21.933332443237305px] w-[21.933332443237305px] transform transition-transform duration-300 ease-out group-hover:scale-110" />
+                        </button>
+                        <button className="crx-icon-btn group overflow-visible">
                             <div className="crx-icon-btn-border" />
-                            <img src={navbar_logo3} alt="Logo" className="h-[21.933332443237305px] w-[21.933332443237305px]" />
-                        </div>
-                        <button className="crx-audit-btn" >
+                            <img src={navbar_logo3} alt="Logo" className="h-[21.933332443237305px] w-[21.933332443237305px] transform transition-transform duration-300 ease-out group-hover:scale-110" />
+                        </button>
+                        <button className="crx-audit-btn group" >
                             <span className="crx-icon-btn-border" />
                             <span className="crx-audit-btn-label">
                                 Request audit
                             </span>
-                            <span className="crx-audit-btn-icon">
+                            <span className="crx-audit-btn-icon transition-transform duration-300 ease-out group-hover:translate-x-1">
                                 <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4.13905 5.7547L6.83176 3.06199L4.13905 0.369286M6.83176 3.06199H0.369263" stroke="white" stroke-width="0.738571" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>

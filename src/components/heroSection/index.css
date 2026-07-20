@@ -31,7 +31,7 @@
 
 .btn-run-app-label {
     font-family: "Inter";
-    @apply font-medium text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[15.67px] leading-[120%] tracking-[0%] text-[#010214];
+    @apply font-medium text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px] 2xl:text-[15.67px] leading-[120%] tracking-[0%] text-[#010214] transition-colors duration-300 group-hover:text-[#4E27BC];
 }
 
 .btn-run-app-icon {

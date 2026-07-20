@@ -18,7 +18,7 @@
 }
 
 .btn-wallet {
-    @apply flex items-center pl-3.25 sm:pl-3.5 md:pl-3.75 lg:pl-4 xl:pl-5 2xl:pl-[25.07px] pr-[8.53px] md:pr-[9.53px] lg:pr-[10.53px] xl:pr-[11.53px] 2xl:pr-[12.53px] py-2 md:py-[9.53px] lg:py-[10.53px] xl:py-[11.53px] 2xl:py-[12.53px] gap-[4.83px] sm:gap-[5.83px] md:gap-[6.83px] lg:gap-[7.83px] rounded-[47px] backdrop-blur-[6.27px] cursor-pointer;
+    @apply flex items-center z-20 pl-3.25 sm:pl-3.5 md:pl-3.75 lg:pl-4 xl:pl-5 2xl:pl-[25.07px] pr-[8.53px] md:pr-[9.53px] lg:pr-[10.53px] xl:pr-[11.53px] 2xl:pr-[12.53px] py-2 md:py-[9.53px] lg:py-[10.53px] xl:py-[11.53px] 2xl:py-[12.53px] gap-[4.83px] sm:gap-[5.83px] md:gap-[6.83px] lg:gap-[7.83px] rounded-[47px] backdrop-blur-[6.27px] cursor-pointer;
     background: linear-gradient(180deg, #4E27BC 0%, #A68AF9 100%);
 }
 
@@ -28,7 +28,7 @@
 }
 
 .from-card {
-    @apply flex flex-col relative rounded-[18.8px] gap-[12.53px] sm:gap-[16.8px] md:gap-[18.8px] px-3 sm:px-3.25 md:px-3.75 lg:px-4 xl:px-5 2xl:px-[25.7px] pt-3.25 sm:pt-3.5 md:pt-3.75 lg:pt-4 xl:pt-5 2xl:pt-[25.7px] pb-[26.35px];
+    @apply flex flex-col relative rounded-[18.8px] gap-[12.53px] sm:gap-[16.8px] md:gap-[18.8px] px-3 sm:px-3.25 md:px-3.75 lg:px-4 xl:px-5 2xl:px-[25.7px] pt-3.25 sm:pt-3.5 md:pt-3.75 lg:pt-4 xl:pt-5 2xl:pt-[25.7px] pb-[26.35px] backdrop-blur-[6.27px] shadow-[inset_0_0_37.6px_0_#C7D3EA0D];
 }
 
 .from-card::before {
